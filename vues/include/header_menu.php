@@ -40,7 +40,7 @@
 				</li>
 
 				<li>
-					<a href="contact" class="dropdown-toggle">Espace membre</a>
+					<a href="login" class="dropdown-toggle">Espace membre</a>
 				</li>
 
 				<li>

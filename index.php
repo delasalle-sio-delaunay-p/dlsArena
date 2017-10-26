@@ -19,4 +19,8 @@ $app->get('/contact', function (Request $request, Response $response) {
     require ('vues/contactVue.php');
 });
 
+$app->get('/login', function (Request $request, Response $response) {
+    require ('vues/loginVue.php');
+});
+
 $app->run();
