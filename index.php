@@ -23,4 +23,20 @@ $app->get('/login', function (Request $request, Response $response) {
     require ('vues/loginVue.php');
 });
 
+$app->get('/register', function (Request $request, Response $response) {
+    require ('vues/inscriptionVue.php');
+});
+
+$app->get('/news', function (Request $request, Response $response) {
+    require ('vues/newsVue.php');
+});
+
+$app->get('/infos', function (Request $request, Response $response) {
+    require ('vues/informationsVue.php');
+});
+
+$app->get('/team', function (Request $request, Response $response) {
+    require ('vues/equipeVue.php');
+});
+
 $app->run();

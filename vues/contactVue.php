@@ -22,13 +22,13 @@
 	
 	<!-- wrapper -->
 	<div id="wrapper">
-		<section class="hero" style="background-image: url(vues/img/cover/cover.jpg);">
-			<div class="hero-bg-primary"></div>
+		<section class="hero bg-dark">
+			<div class="hero-bg"></div>
 			<div class="container">
 				<div class="page-header">
 					<div class="page-title">Contactez-nous !</div>
 					<ol class="breadcrumb">
-						<li><a href="index-2.html">Accueil</a></li>
+						<li><a href="index" class="no-padding-left">Accueil</a></li>
 						<li class="active">Contact</li>
 					</ol>	
 				</div>
@@ -37,34 +37,36 @@
 
 		<section class="padding-30">
 			<div class="container text-center">
-				<h2 class="font-size-22 font-weight-300">We would like to hear <span class="font-weight-500">about you</span> just send us a message!</h2>
+				<h2 class="font-size-22 font-weight-300"> <span class="font-weight-500">Formulaire de contact</span> </h2>
 			</div>
 		</section>
 
-		<section class="border-top-1 border-bottom-1 border-grey-400 section no-padding no-margin">
+		<!--<section class="border-top-1 border-bottom-1 border-grey-400 section no-padding no-margin">
 			<div id="map" class="height-300"></div>
-		</section>
-	
+		</section>-->
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3167.1220269747437!2d-1.668542653146133!3d48.12525052508511!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa5c8facc41e599e8!2sLyc%C3%A9e+de+la+Salle!5e0!3m2!1sfr!2sfr!4v1509120792090" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 		<section class="overflow-hidden">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="title">
-							<h4><i class="fa fa-envelope"></i> Lets Get In Touch!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis facilisis justo.</p>
+							<h4><i class="fa fa-envelope"></i> Restons en contact !</h4>
+							<p>Nous veillerons à vous répondre dans les plus brefs délais.</p>
 						</div>
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Email" required>
+								<input type="text" class="form-control" placeholder="Adresse mail" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Subject" required>
+								<input type="text" class="form-control" placeholder="Sujet" required>
 							</div>
 							<div class="form-group">
 								<textarea class="form-control" rows="7" placeholder="Message"></textarea>
 							</div>
 							<div class="text-center margin-top-30">
-								<button type="button" class="btn btn-primary btn-lg btn-rounded btn-shadow">Send Message</button>
+								<button type="button" class="btn btn-primary btn-lg btn-rounded btn-shadow">Envoyer le message</button>
 							</div>
 						</form>
 					</div>

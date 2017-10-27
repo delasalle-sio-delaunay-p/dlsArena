@@ -11,14 +11,14 @@
 				</li>
 
 				<li>
-					<a href="/" class="dropdown-toggle">News</a>
+					<a href="news" class="dropdown-toggle">News</a>
 				</li>
 
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">L'événement</a>
 					<ul class="dropdown-menu default">
-						<li><a href="#">Informations générales</a></li>
-						<li><a href="#">Présentation de l'équipe</a></li>
+						<li><a href="infos">Informations générales</a></li>
+						<li><a href="team">Présentation de l'équipe</a></li>
 						<li><a href="#">F.A.Q</a></li>
 					</ul>
 				</li>
