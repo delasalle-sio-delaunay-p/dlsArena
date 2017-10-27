@@ -1,3 +1,4 @@
+<?php
 class Utilisateur
 {
 	// ------------------------------------------------------------------------------------------------------
@@ -5,23 +6,27 @@ class Utilisateur
 	// ------------------------------------------------------------------------------------------------------
 	
 	private $id;				// identifiant de l'utilisateur (numéro automatique dans la BDD)
-	private $level;				// 0=simple visiteur  1=utilisateur pouvant réserver  2=administrateur
-	private $name;				// nom de l'utilisateur
-	private $password;			// mot de passe de l'utilisateur
+	private $nom;				// nom de l'utilisateur
+	private $prenom;			// prénom de l'utilisateur
 	private $email;				// adresse mail de l'utilisateur
-	private $lesReservations;	// la collection des réservations passées par l'utilisateur
+	private $tel;				// numéro de téléphone de l'utilisateur
+	private $niveau;			// 1 = utilisateur lambda   2 = administrateur
+	private $login;				// nom de l'utilisateur
+	private $password;			// mot de passe de l'utilisateur
 	
 	// ------------------------------------------------------------------------------------------------------
 	// ----------------------------------------- Constructeur -----------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
 	
-	public function Utilisateur($unId, $unLevel, $unName, $unPassword, $unEmail) {
+	public function Utilisateur($unId, $unNom, $unPrenom, $unEmail, $unTel, $unNiveau, $unLogin, $unPassword) {
 		$this->id = $unId;
-		$this->level = $unLevel;
-		$this->name = $unName;
-		$this->password = $unPassword;
+		$this->nom = $unNom;
+		$this->prenom = $unPrenom;
 		$this->email = $unEmail;
-		$this->lesReservations = array();
+		$this->tel = $unTel;
+		$this->niveau = $unNiveau;
+		$this->login = $unLogin;
+		$this->password = $unPassword;
 	}	
 	
 	// ------------------------------------------------------------------------------------------------------
@@ -30,56 +35,46 @@ class Utilisateur
 	
 	public function getId()	{return $this->id;}
 	public function setId($unId) {$this->id = $unId;}
+
+	public function getNom()	{return $this->nom;}
+	public function setNom($unNom) {$this->nom = $unNom;}
 	
-	public function getLevel()	{return $this->level;}
-	public function setLevel($unLevel) {$this->level = $unLevel;}
+	public function getPrenom()	{return $this->prenom;}
+	public function setPrenom($unPrenom) {$this->prenom = $unPrenom;}
+
+	public function getEmail()	{return $this->email;}
+	public function setEmail($unEmail) {$this->email = $unEmail;}
+
+	public function getTel()	{return $this->tel;}
+	public function setTel($unTel) {$this->tel = $unTel;}
+
+	public function getNiveau()	{return $this->niveau;}
+	public function setNiveau($unLevel) {$this->niveau = $unNiveau;}
 	
-	public function getName()	{return $this->name;}
-	public function setName($unName) {$this->name = $unName;}
-	
+	public function getLogin()	{return $this->login;}
+	public function setLogin($unLogin) {$this->login = $unLogin;}
+
 	public function getPassword()	{return $this->password;}
 	public function setPassword($unPassword) {$this->password = $unPassword;}
 	
-	public function getEmail()	{return $this->email;}
-	public function setEmail($unEmail) {$this->email = $unEmail;}
-	
-	public function getLesReservations()	{return $this->lesReservations;}
 	
 	// ------------------------------------------------------------------------------------------------------
 	// -------------------------------------- Méthodes d'instances ------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
 	
-	public function ajouteReservation($uneReservation)
-	{	// ajoute l'objet à la liste
-		$this->lesReservations[] = $uneReservation;
-	}
-	public function getLaReservation($i)
-	{	// fournit la réservation correspondant à l'index demandé
-		return $this->lesReservations[$i];
-	}
-	public function getNbReservations()
-	{	// fournit le nombre de réservations dans la liste
-		return sizeof($this->lesReservations);
-	}
-	public function viderListeReservations()
-	{	// vide la collection des réservations
-		$this->lesReservations = array();
-	}
+
 	public function toString() {
 		$msg = 'Utilisateur : <br>';
 		$msg .= 'id : ' . $this->getId() . '<br>';
-		$msg .= 'level : ' . $this->getLevel() . '<br>';
-		$msg .= 'name : ' . $this->getName() . '<br>';
-		$msg .= 'password : ' . $this->getPassword() . '<br>';
+		$msg .= 'nom : ' . $this->getNom() . '<br>';
+		$msg .= 'prenom : ' . $this->getPrenom() . '<br>';
 		$msg .= 'email : ' . $this->getEmail() . '<br>';
-		$msg .= 'nombre de réservations : ' . $this->getNbReservations() . '<br>';
+		$msg .= 'tel : ' . $this->getTel() . '<br>';
+		$msg .= 'niveau : ' . $this->getNiveau() . '<br>';
+		$msg .= 'login : ' . $this->getLogin() . '<br>';
+		$msg .= 'password : ' . $this->getPassword() . '<br>';
 		$msg .= '<br>';
 		
-		// ajout des réservations dans la chaîne
-		foreach ($this->lesReservations as $uneReservation)
-		{	$msg .= $uneReservation->toString();
-			$msg .= '<br>';
-		}
 		return $msg;
 	}
 	
