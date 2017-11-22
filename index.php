@@ -22,12 +22,12 @@ $app->post('/index', function () {
     
 });
 
-
+*/
 $app->get('/index2', function (Request $request, Response $response) {
     require ('vues/indexVue2.php');
 });
 
-*/
+
 
 // Page contact
 
@@ -61,6 +61,11 @@ $app->get('/infos', function (Request $request, Response $response) {
 // Page équipe
 $app->get('/team', function (Request $request, Response $response) {
     require ('vues/equipeVue.php');
+});
+
+// Page menu membre
+$app->get('/membermenu', function (Request $request, Response $response) {
+    require ('vues/menuMembreVue.php');
 });
 
 $app->run();

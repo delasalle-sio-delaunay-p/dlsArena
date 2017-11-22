@@ -31,9 +31,9 @@
 					<h2>Présentation de l'équipe</h2>
 				</div>
 				<br/><br/>
-				<img src="http://www.h1z1config.com/wp-content/uploads/2016/10/gotaga.png" class="img-circle" alt="">
-				<img src="http://www.h1z1config.com/wp-content/uploads/2016/10/gotaga.png" class="img-circle" alt="">
-				<img src="http://www.h1z1config.com/wp-content/uploads/2016/10/gotaga.png" class="img-circle" alt="">
+				<img src="http://placehold.it/300x300/ECECEC" class="img-circle" alt="">
+				<img src="http://placehold.it/300x300/ECECEC" class="img-circle" alt="">
+				<img src="http://placehold.it/300x300/ECECEC" class="img-circle" alt="">
 			</div>
 		</section>
 
