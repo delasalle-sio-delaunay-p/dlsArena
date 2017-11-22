@@ -31,16 +31,16 @@
 							<div class="panel-body">
 								<!--<a class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Connect with Facebook</a>
 								<div class="separator"><span>or</span></div>-->								
-								<form>
+								<form action="login" method="post">
 									<div class="form-group input-icon-left">
 										<i class="fa fa-user"></i>
-										<input type="text" class="form-control" name="username" placeholder="Mon identifiant">
+										<input type="text" class="form-control" name="login" placeholder="Mon identifiant" required>
 									</div>
 									<div class="form-group input-icon-left">
 										<i class="fa fa-lock"></i>
-										<input type="password" class="form-control" name="password" placeholder="Mon mot de passe">
+										<input type="password" class="form-control" name="password" placeholder="Mon mot de passe" required>
 									</div>
-									<button type="button" class="btn btn-primary btn-block">Valider</button>
+									<input type="submit" value="Valider" class="btn btn-primary btn-block">
 									
 										<div class="form-actions">
 										<div class="checkbox checkbox-primary">

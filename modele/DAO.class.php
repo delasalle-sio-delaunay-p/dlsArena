@@ -8,6 +8,7 @@
 
 // inclusion des paramètres de l'application
 include_once ('parametres.localhost.php');
+include_once ('Users.class.php');
 
 // début de la classe DAO (Data Access Object)
 class DAO
@@ -46,7 +47,34 @@ class DAO
 	// -------------------------------------- Méthodes d'instances ------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
 
-
+    /**
+     * getUserLevel - retourne le niveau de l'utilisateur à partir du login/password
+     * @param un login $loginUser
+     * @param un password $passwordUser
+     * @return string
+     */
+	public function getUserLevel($loginUser, $passwordUser)
+	{	// préparation de la requête de recherche
+	    $txt_req = "Select level from users where login = :loginUser and password = :passwordUser";
+	    $req = $this->cnx->prepare($txt_req);
+	    // liaison de la requête et de ses paramètres
+	    $req->bindValue("loginUser", $loginUser, PDO::PARAM_STR);
+	    $req->bindValue("passwordUser", sha1($passwordUser), PDO::PARAM_STR);
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    // traitement de la réponse
+	    $reponse = "inconnu";
+	    if ($uneLigne)
+	    {	$level = $uneLigne->level;
+	    if ($level == "1") $reponse = "utilisateur";
+	    if ($level == "2") $reponse = "administrateur";
+	    }
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    // fourniture de la réponse
+	    return $reponse;
+	}	
 
 
 

@@ -41,6 +41,10 @@ $app->get('/login', function (Request $request, Response $response) {
     require ('vues/loginVue.php');
 });
 
+$app->post('/login', function () {
+    require ('controleurs/CtrlLogin.php');
+});
+
 // Page d'inscription
 
 $app->get('/register', function (Request $request, Response $response) {

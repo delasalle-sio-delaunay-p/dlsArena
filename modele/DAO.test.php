@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Tests unitaires classe User</title>
+    <title>Tests unitaires classe DAO</title>
   </head>
   <body>
 <?php
@@ -17,9 +17,11 @@ include_once ('DAO.class.php');
  * Début des tests
  */
 
-$unUser = new User(2, 2, "Christophe", "Robert", "posteprof2@lycee-dls.com", "0299133792", "prof2", sha1("mpnom2") );
+$dao = new DAO();
 
-echo $unUser->toString();
+echo $dao->getUserLevel("admin", "admin");
+echo "<br/>";
+echo $dao->getUserLevel("test", "test");
 
 ?>
 
