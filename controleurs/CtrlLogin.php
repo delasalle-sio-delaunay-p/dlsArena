@@ -18,7 +18,7 @@ if (isset($_POST['login']) && isset($_POST['password']) ) {
     if ($result == "administrateur") {
         $message = "Login OK !";
         $typeMessage = "information";
-        include_once ('vues/indexVue2.php');
+        include_once ('vues/indexVue.php');
         
     }
     
