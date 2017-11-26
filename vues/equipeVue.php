@@ -27,15 +27,53 @@
 
 		<section class="elements">
 			<div class="container">
-				<div class="post-title">
-					<h2>Présentation de l'équipe</h2>
+				<h3>Présentation de l'équipe</h3>
+				<p>L'équipe de la DLS Arena 5 est constituée d'élèves de SIO2.</p>
+				<div class="row margin-top-30">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 margin-bottom-sm-30">
+						<div class="thumbnail">
+							<h4 class="thumbnail-title">Titouan B.</h4>
+							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/08/iStock-611180400-268x200.jpg" alt="">
+							<div class="caption padding-20">
+								<p>Expert cyber-sécurité et administrateur systèmes et réseaux</p>
+								<a href="http://www.lycee-delasalle.com/"><button type="button" class="btn btn-block btn-primary btn-rounded">Plus d'infos</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 margin-bottom-sm-30">
+						<div class="thumbnail">
+							<h4 class="thumbnail-title">Florian L.</h4>
+							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/01/common-printer-problems-1-268x200.jpg" alt="">
+							<div class="caption">
+								<p>Chef de projet et directeur des systèmes d'information.</p>
+								<a href="http://www.lycee-delasalle.com/"><button type="button" class="btn btn-block btn-primary btn-rounded">Plus d'infos</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 margin-bottom-sm-30">
+						<div class="thumbnail">
+							<h4 class="thumbnail-title">Aymeric R.</h4>
+							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/04/Credit-AfricaImages-268x200.jpg" alt="">
+							<div class="caption">
+								<p>Représentant CNIL et délégué à la protection des données personnelles.</p>
+								<a href="http://www.lycee-delasalle.com/"><button type="button" class="btn btn-block btn-primary btn-rounded">Plus d'infos</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<div class="thumbnail">
+							<h4 class="thumbnail-title">Pierre D.</h4>
+							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/04/Image-1-268x200.jpg" alt="">
+							<div class="caption">
+								<p>Lead développeur, développeur full-stack.</p>
+								<a href="http://www.lycee-delasalle.com/"><button type="button" class="btn btn-block btn-primary btn-rounded">Plus d'infos</button></a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<br/><br/>
-				<img src="http://placehold.it/300x300/ECECEC" class="img-circle" alt="">
-				<img src="http://placehold.it/300x300/ECECEC" class="img-circle" alt="">
-				<img src="http://placehold.it/300x300/ECECEC" class="img-circle" alt="">
 			</div>
 		</section>
+
 
 
 	</div>

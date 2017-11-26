@@ -51,7 +51,8 @@
 								</form>
 							</div>
 							<div class="panel-footer">
-								Pas de compte ? <a href="register">S'inscrire maintenant</a>
+								Pas de compte ? <a href="register">S'inscrire maintenant</a><br/>
+								Mot de passe oublié ? <a href="index">Cliquez ici</a>
 							</div>
 						</div>
 					</div>

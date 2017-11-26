@@ -72,4 +72,28 @@ $app->get('/membermenu', function (Request $request, Response $response) {
     require ('vues/menuMembreVue.php');
 });
 
+// Page jeux CS
+$app->get('/cs', function (Request $request, Response $response) {
+   require ('vues/csVue.php');
+});
+
+// Page jeux LoL
+$app->get('/lol', function (Request $request, Response $response) {
+   require ('vues/lolVue.php');
+});
+
+// Page jeux Fifa
+$app->get('/fifa', function (Request $request, Response $response) {
+   require ('vues/fifaVue.php');
+});
+
+// Page jeux Rocket League
+$app->get('/rl', function (Request $request, Response $response) {
+   require ('vues/rlVue.php');
+});
+
+// Page jeux Pokémon
+$app->get('/pokemon', function (Request $request, Response $response) {
+   require ('vues/pokemonVue.php');
+});
 $app->run();

@@ -26,16 +26,15 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">Les jeux</a>
 					<ul class="dropdown-menu default">
-						<li><a href="#">CS:GO</a></li>
-						<li><a href="#">League Of Legends</a></li>
-						<li><a href="#">Fifa 2018</a></li>
-						<li><a href="#">Rocket League</a></li>
-						<li><a href="#">Paladins</a></li>
-						<li><a href="#">Jeu 6</a></li>
-						<li><a href="#">Jeu 7</a></li>
+						<li><a href="cs">CS:GO</a></li>
+						<li><a href="lol">League Of Legends</a></li>
+						<li><a href="fifa">Fifa 2018</a></li>
+						<li><a href="rl">Rocket League</a></li>
+						<li><a href="pokemon">Pokémon</a></li>
+						<!--<li><a href="#">Jeu 7</a></li>
 						<li><a href="#">Jeu 8</a></li>
 						<li><a href="#">Jeu 9</a></li>
-						<li><a href="#">Jeu 10</a></li>
+						<li><a href="#">Jeu 10</a></li>-->
 					</ul>
 				</li>
 

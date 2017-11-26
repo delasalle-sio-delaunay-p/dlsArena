@@ -33,8 +33,8 @@
 		<div class="container">
 			<div class="carousel-caption">
 				<h1 data-animation="animated animate1 bounceInDown">Counter-Strike : GO</h1>
-				<p data-animation="animated animate7 fadeInUp">Cyka blyat RUSH B</p>
-				<a href="" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeInDown">En savoir plus</a>
+				<p data-animation="animated animate7 fadeInUp">Tournoi CS:GO 5vs5</p>
+				<a href="cs" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeInDown">En savoir plus</a>
 			</div>		
 		</div>
 </div>
@@ -46,8 +46,8 @@
 		<div class="container">
 			<div class="carousel-caption">
 				<h1 data-animation="animated animate1 fadeInDown">League Of Legends</h1>
-				<p data-animation="animated animate7 fadeIn">La ligue des légendes.</p>
-				<a href="" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeIn">En savoir plus</a>
+				<p data-animation="animated animate7 fadeIn">Tournoi LoL 5vs5</p>
+				<a href="lol" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeIn">En savoir plus</a>
 			</div>
 		</div>
 </div>
@@ -59,8 +59,8 @@
 		<div class="container">
 			<div class="carousel-caption">
 				<h1 data-animation="animated animate1 fadeIn">Fifa 2018</h1>
-				<p data-animation="animated animate7 fadeIn">Un jeu de foot.</p>
-				<a href="" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeIn">En savoir plus</a>
+				<p data-animation="animated animate7 fadeIn">Tournoi Fifa 1vs1</p>
+				<a href="fifa" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeIn">En savoir plus</a>
 			</div>
 		</div>
 </div>
@@ -72,8 +72,8 @@
 		<div class="container">
 			<div class="carousel-caption">
 				<h1 data-animation="animated animate1 fadeIn">Rocket League</h1>
-				<p data-animation="animated animate7 fadeIn">Un jeu de foot avec des voitures.</p>
-				<a href="" data-toggle="modal" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeIn">En savoir plus</a>
+				<p data-animation="animated animate7 fadeIn">Tournoi RocketLeague 3vs3</p>
+				<a href="rl" class="btn btn-primary btn-lg btn-rounded" data-animation="animated animate10 fadeIn">En savoir plus</a>
 			</div>
 		</div>
 </div>
