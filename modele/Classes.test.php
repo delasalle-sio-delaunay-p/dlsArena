@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Tests unitaires classe News</title>
+    <title>Tests unitaires classe Classes</title>
   </head>
   <body>
 <?php
@@ -12,15 +12,15 @@
  */
 include_once ('Users.class.php');
 include_once ('DAO.class.php');
-include_once ('News.class.php');
+include_once ('Classes.class.php');
 
 /**
  * Début des tests
  */
 
-$uneNews = new News(1, 'Un titre', 'Contenu', 'Créée le 24/11/2017 17:22', 'admin', 5);
+$uneClasse = new Classe(1, 'Services Informatiques aux Organisations 1', 'SIO1');
 
-echo $uneNews->toString();
+echo $uneClasse->toString();
 
 ?>
 
