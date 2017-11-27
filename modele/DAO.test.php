@@ -23,6 +23,26 @@ echo $dao->getUserLevel("admin", "admin");
 echo "<br/>";
 echo $dao->getUserLevel("test", "test");
 
+/*
+echo "<br/>";
+$lesClasses = $dao->getClasses();
+
+foreach ($lesClasses as $uneClasse)
+{
+    echo $uneClasse->toString();
+}
+
+echo $dao->getInitialsById(1);
+
+*/
+
+/*
+$unUser = new User(2, 2, "Christophe", "Robert", "posteprof2@lycee-dls.com", "0299133792", "prof2", sha1("mpnom2") );
+echo $dao->ajouterUtilisateur($unUser);
+*/
+
+
+unset($dao);
 ?>
 
   </body>

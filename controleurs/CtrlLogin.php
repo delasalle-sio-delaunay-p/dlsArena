@@ -21,6 +21,11 @@ if (isset($_POST['login']) && isset($_POST['password']) ) {
         include_once ('vues/indexVue.php');
         
     }
+    else {
+        $message = "Identifiant ou mot de passe incorrect !";
+        $typeMessage = "avertissement";
+        include_once ('vues/indexVue.php');
+    }
     
     unset($dao);
     
