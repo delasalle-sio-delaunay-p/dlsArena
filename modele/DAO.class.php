@@ -9,6 +9,10 @@
 // inclusion des paramètres de l'application
 include_once ('parametres.localhost.php');
 include_once ('Users.class.php');
+include_once ('News.class.php');
+include_once ('Comments.class.php');
+include_once ('Games.class.php');
+include_once ('Teams.class.php');
 
 // début de la classe DAO (Data Access Object)
 class DAO
@@ -74,7 +78,59 @@ class DAO
 	    $req->closeCursor();
 	    // fourniture de la réponse
 	    return $reponse;
-	}	
+	}
+	
+	/***
+	 * getTeams - retourne une collection d'objets équipe
+	 * @return Team[]
+	 */
+	public function getTeams()
+	{  // préparation de la requete
+	    $txt_req = "Select * from teams";
+	    
+	    $req = $this->cnx->prepare($txt_req);
+	    
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    
+	    // construction d'une collection d'objets Salle
+	    $lesTeams = array();
+	    
+	    // tant qu'une ligne est trouvée :
+	    while ($uneLigne)
+	    {  //objet Salle
+	        $unId = utf8_encode($uneLigne->id);
+	        $unName = utf8_encode($uneLigne->name);
+	        $unCreateBy = utf8_encode($uneLigne->createBy);
+	        $unPassword = utf8_encode($uneLigne->password);
+	        
+	        $uneTeam = new Team($unId, $unName, $unCreateBy, $unPassword);
+	        
+	        $lesTeams[]= $uneTeam;
+	        
+	        // extrait la ligne suivante
+	        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    }
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    // fourniture de la collection
+	    return $lesTeams;
+	}
+	
+	/***
+	 * getTeamById - retourne un objet équipe à partir de l'id
+	 * @param int $unId
+	 */
+	public function getTeamById($unId)
+	{
+	    
+	    
+	    
+	    
+	    
+	    
+	}
 
 
 
