@@ -7,6 +7,9 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\App;
 
+include_once ('modele/DAO.class.php');
+include_once ('modele/Users.class.php');
+
 // Page d'accueil
 
 $app->get('/', function (Request $request, Response $response) {
@@ -16,17 +19,6 @@ $app->get('/', function (Request $request, Response $response) {
 $app->get('/index', function (Request $request, Response $response) {
     require ('vues/indexVue.php');
 });
-
-/*
-$app->post('/index', function () {
-    
-});
-
-*/
-$app->get('/index2', function (Request $request, Response $response) {
-    require ('vues/indexVue2.php');
-});
-
 
 
 // Page contact
@@ -54,7 +46,7 @@ $app->get('/register', function (Request $request, Response $response) {
 // Page des news
 
 $app->get('/news', function (Request $request, Response $response) {
-    require ('vues/newsVue.php');
+    require ('vues/newsVue.php'); 
 });
 
 // Page infos
@@ -68,7 +60,7 @@ $app->get('/team', function (Request $request, Response $response) {
 });
 
 // Page menu membre
-$app->get('/membermenu', function (Request $request, Response $response) {
+$app->get('/my-menu', function (Request $request, Response $response) {
     require ('vues/menuMembreVue.php');
 });
 

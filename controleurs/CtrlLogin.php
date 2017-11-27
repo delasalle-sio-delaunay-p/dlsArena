@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * Contrôleur Login
  */
@@ -15,11 +17,11 @@ if (isset($_POST['login']) && isset($_POST['password']) ) {
     
     $result = $dao->getUserLevel($login, $password);
     
-    if ($result == "administrateur") {
+    if ($result == "administrateur" || $result == "utilisateur") {
+        
         $message = "Login OK !";
         $typeMessage = "information";
         include_once ('vues/indexVue.php');
-        
     }
     else {
         $message = "Identifiant ou mot de passe incorrect !";
