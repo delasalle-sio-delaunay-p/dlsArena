@@ -9,16 +9,18 @@ class Comment
 	private $content;			// contenu du commentaire
 	private $created;           // date de création
 	private $author;            // auteur du commentaire
+	private $idnews;            // identifiant de la news concernée
 
 	// ------------------------------------------------------------------------------------------------------
 	// ----------------------------------------- Constructeur -----------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
 	
-	public function Comment($unId, $unContent, $unCreated, $unAuthor) {
+	public function Comment($unId, $unContent, $unCreated, $unAuthor, $unIdNews) {
 		$this->id = $unId;
 		$this->content = $unContent;
 		$this->created = $unCreated;
 		$this->author = $unAuthor;
+		$this->idnews = $unIdNews;
 	}	
 	
 	// ------------------------------------------------------------------------------------------------------
@@ -36,6 +38,9 @@ class Comment
 
 	public function getAuthor()	{return $this->author;}
 	public function setAuthor($unAuthor) {$this->author = $unAuthor;}
+	
+	public function getIdNews()	{return $this->idnews;}
+	public function setIdNews($unIdNews) {$this->idnews = $unIdNews;}
 
 
 	// ------------------------------------------------------------------------------------------------------
@@ -49,6 +54,7 @@ class Comment
 		$msg .= 'contenu : ' . $this->getContent() . '<br>';
 		$msg .= 'date de création : ' . $this->getCreated() . '<br>';
 		$msg .= 'auteur : ' . $this->getAuthor() . '<br>';
+		$msg .= 'id news : ' . $this->getIdNews() . '<br>';
 		$msg .= '<br>';
 		
 		return $msg;

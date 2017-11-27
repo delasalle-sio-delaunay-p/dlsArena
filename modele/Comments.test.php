@@ -19,7 +19,7 @@ include_once ('Comments.class.php');
  * Début des tests
  */
 
-$unCommentaire = new Comment(1, 'Contenu', 'Créée le 24/11/2017 17:22', 'admin');
+$unCommentaire = new Comment(1, 'Contenu', 'Créée le 24/11/2017 17:22', 'admin', 1);
 
 echo $unCommentaire->toString();
 
