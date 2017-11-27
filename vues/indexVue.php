@@ -103,45 +103,8 @@
 		</div>
 	</section>
 
-<!-- Modal Information -->
-<div class="container">
-	<div class="modal fade bs-modal" id="modalInformation" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title">Information</h4>
-				</div>
-				<div class="modal-body">
-					<p id="texte_message_information">Ceci est une information</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-warning" data-dismiss="modal">Fermer</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Modal Avertissement -->
-<div class="container">
-	<div class="modal fade bs-modal" id="modalAvertissement" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title">Avertissement</h4>
-				</div>
-				<div class="modal-body">
-					<p id="texte_message_avertissement">Ceci est un avertissement</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-warning" data-dismiss="modal">Fermer</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<!-- Modals-->
+<?php include_once('include/modal.php'); ?>
 
 </div>
 <!-- /Rejoindre -->
@@ -185,31 +148,7 @@ return false;
 })(jQuery);
 </script>
 <script>
-	$(function() {
-		$('#countdown').countdown('2018/03/24').on('update.countdown', function(event) {
-			var $this = $(this).html(event.strftime(''
-			+'<span>%-w week%!w</span>'
-			+'<span>%-d day%!d</span>'
-			+'<span>%H hr</span>'
-			+'<span>%M min</span>'
-			+'<span>%S sec</span>'));
-		});
-		$('.chart-color').easyPieChart({
-			easing: 'easeOutBounce',
-			barColor: '#5eb404',
-			trackColor: '#e3e3e3',
-			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
-				}
-		});
-		
-		$('.chart-extra').easyPieChart({
-			easing: 'easeOutBounce',
-			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
-			}
-		});
-	});
+	<?php include_once('include/modal.js'); ?>
 </script>
 
   <script>
