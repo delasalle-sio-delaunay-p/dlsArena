@@ -94,31 +94,38 @@
 	<script src="vues/plugins/jquery/jquery-1.11.1.min.js"></script>
 	<script src="vues/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="vues/plugins/core.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script src="vues/plugins/gmaps/prettify.js"></script>
-	<script src="vues/plugins/gmaps/gmaps.js"></script>
 	<script>
-	(function($) {
-	"use strict";
-		var map;
-		$(document).ready(function(){
-			prettyPrint();
-			var map = new GMaps({
-				div: '#map',
-				scrollwheel: false,
-				lat: -12.043333,
-				lng: -77.028333
-			});
-			var marker = map.addMarker({
-				lat: -12.042,
-				lng: -77.028333
-			});
-		});
-	})(jQuery);
-	</script>
+  	  $(document).ready(function() {
+   
+    // affichage du message préparé par le contrôleur avec une fenêtre de dialogue
+	// activée en JQuery dès que la page est prête
+	<?php if($typeMessage == "avertissement") {?>
+	afficher_avertissement("<?php echo $message; ?>");
+	<?php } ?>
+		
+	<?php if($typeMessage == "information") {?>
+	afficher_information("<?php echo $message; ?>");
+	<?php } ?>
 
-	<script>
-  		<?php include_once('include/modal.js'); ?>
+    // affichage d'une information avec une fenêtre modale
+	function afficher_information(msg)
+	{
+		$('#texte_message_information').empty();
+		$('#texte_message_information').append(msg);
+		// affiche la boîte de dialogue 'affichage_message_information'
+		$('#modalInformation').modal('show');
+	}
+
+	// affichage d'un avertissement avec une fenêtre modale
+	function afficher_avertissement(msg)
+	{
+		$('#texte_message_avertissement').empty();
+		$('#texte_message_avertissement').append(msg);
+		// affiche la boîte de dialogue 'affichage_message_avertissement' 
+		$('#modalAvertissement').modal('show');
+	}
+
+  });
   	</script>
 </body>
 
