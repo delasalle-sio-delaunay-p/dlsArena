@@ -27,6 +27,10 @@ $app->get('/contact', function (Request $request, Response $response) {
     require ('vues/contactVue.php');
 });
 
+$app->post('/contact', function (Request $request, Response $response) {
+    require ('controleurs/CtrlContact.php');
+});
+
 // Page de connexion
 
 $app->get('/login', function (Request $request, Response $response) {

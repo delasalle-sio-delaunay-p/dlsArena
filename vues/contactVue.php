@@ -56,18 +56,18 @@
 							<h4><i class="fa fa-envelope"></i> Restons en contact !</h4>
 							<p>Nous veillerons à vous répondre dans les plus brefs délais.</p>
 						</div>
-						<form>
+						<form action="contact" method="post">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Adresse mail" required>
+								<input type="text" id="mail" name="mail" class="form-control" placeholder="Adresse mail" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Sujet" required>
+								<input type="text" id="sujet" name="sujet" class="form-control" placeholder="Sujet" required>
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" rows="7" placeholder="Message"></textarea>
+								<textarea id="contenu" name="contenu" class="form-control" rows="7" placeholder="Message" required></textarea>
 							</div>
 							<div class="text-center margin-top-30">
-								<button type="button" class="btn btn-primary btn-lg btn-rounded btn-shadow">Envoyer le message</button>
+								<button type="submit" class="btn btn-primary btn-lg btn-rounded btn-shadow">Envoyer le message</button>
 							</div>
 						</form>
 					</div>
@@ -77,6 +77,10 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Modals-->
+		<?php include_once('include/modal.php'); ?>
+		
 	</div>
 	<!-- /#wrapper -->
 	
@@ -112,6 +116,10 @@
 		});
 	})(jQuery);
 	</script>
+
+	<script>
+  		<?php include_once('include/modal.js'); ?>
+  	</script>
 </body>
 
 </html>
