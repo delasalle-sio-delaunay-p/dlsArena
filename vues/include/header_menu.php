@@ -19,7 +19,7 @@
 					<ul class="dropdown-menu default">
 						<li><a href="infos">Informations générales</a></li>
 						<li><a href="team">Présentation de l'équipe</a></li>
-						<li><a href="#">F.A.Q</a></li>
+						<li><a href="faq">F.A.Q</a></li>
 					</ul>
 				</li>
 

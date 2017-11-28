@@ -39,8 +39,9 @@ echo $dao->getInitialsById(1);
 /*
 $unUser = new User(2, 2, "Christophe", "Robert", "posteprof2@lycee-dls.com", "0299133792", "prof2", sha1("mpnom2") );
 echo $dao->ajouterUtilisateur($unUser);
-*/
 
+echo $ok = $dao->updateInfosConnexion(2);
+*/
 
 unset($dao);
 ?>

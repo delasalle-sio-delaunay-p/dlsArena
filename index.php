@@ -54,6 +54,11 @@ $app->get('/infos', function (Request $request, Response $response) {
     require ('vues/informationsVue.php');
 });
 
+// Page faq
+$app->get('/faq', function (Request $request, Response $response) {
+   require ('vues/faqVue.php');
+});
+
 // Page équipe
 $app->get('/team', function (Request $request, Response $response) {
     require ('vues/equipeVue.php');

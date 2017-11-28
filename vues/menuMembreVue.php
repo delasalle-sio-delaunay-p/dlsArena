@@ -13,11 +13,11 @@
 	<!-- wrapper -->
 	<div id="wrapper">	
 
-		<section class="bg-primary">
+		<!--<section class="bg-primary">
 			<div class="container">
 				<h2 class="font-size-24 color-white font-weight-300">Menu espace membre</h2>
 			</div>
-		</section>
+		</section>-->
 
 		<section class="bg-grey-50 border-bottom-1 border-grey-300 padding-top-10 padding-bottom-10">
 			<div class="container">

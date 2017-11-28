@@ -240,8 +240,6 @@ class DAO
 	    $req->bindValue("password", sha1($unPassword), PDO::PARAM_STR);
 	    $req->bindValue("ip", $ip, PDO::PARAM_STR);
 	    
-	    
-	    
 	    // extraction des données
 	    $ok = $req->execute();
 	    
@@ -249,7 +247,35 @@ class DAO
 	    
 	}
 
-
+	/***
+	 * updateInfosConnexion - retourne un booléen, true si réussite, false sinon
+	 * @param int $unId
+	 * @return boolean
+	 */
+    public function updateInfosConnexion($unId)
+    {
+        // récupération de l'adresse ip du client
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        
+        $dateTimeNow = date("Y-m-d H:i:s");
+        
+        $txt_req = "UPDATE users SET ipAdress = :ip, lastLogin = :dt WHERE id = :id";
+        $req = $this->cnx->prepare($txt_req);
+        $req->bindValue("ip", $ip, PDO::PARAM_STR);
+        $req->bindValue("dt", $dateTimeNow, PDO::PARAM_STR);
+        $req->bindValue("id", $unId, PDO::PARAM_STR);
+        
+        // extraction des données
+        $ok = $req->execute();
+        
+        return $ok;   
+    }
 
 
 }

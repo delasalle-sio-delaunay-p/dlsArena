@@ -148,41 +148,34 @@ return false;
 })(jQuery);
 </script>
 <script>
-	<?php include_once('include/modal.js'); ?>
-</script>
-
+ 	$(function() {
+ 		$('#countdown').countdown('2018/03/24').on('update.countdown', function(event) {
+ 			var $this = $(this).html(event.strftime(''
+ 			+'<span>%-w week%!w</span>'
+ 			+'<span>%-d day%!d</span>'
+ 			+'<span>%H hr</span>'
+ 			+'<span>%M min</span>'
+ 			+'<span>%S sec</span>'));
+ 		});
+ 		$('.chart-color').easyPieChart({
+ 			easing: 'easeOutBounce',
+ 			barColor: '#5eb404',
+ 			trackColor: '#e3e3e3',
+ 			onStep: function(from, to, percent) {
+ 				$(this.el).find('.percent').text(Math.round(percent));
+ 				}
+ 		});
+ 		
+ 		$('.chart-extra').easyPieChart({
+ 			easing: 'easeOutBounce',
+ 			onStep: function(from, to, percent) {
+ 				$(this.el).find('.percent').text(Math.round(percent));
+ 			}
+ 		});
+ 	});
+  </script>
   <script>
-  $(document).ready(function() {
-   
-    // affichage du message préparé par le contrôleur avec une fenêtre de dialogue
-	// activée en JQuery dès que la page est prête
-	<?php if($typeMessage == "avertissement") {?>
-	afficher_avertissement("<?php echo $message; ?>");
-	<?php } ?>
-		
-	<?php if($typeMessage == "information") {?>
-	afficher_information("<?php echo $message; ?>");
-	<?php } ?>
-
-    // affichage d'une information avec une fenêtre modale
-	function afficher_information(msg)
-	{
-		$('#texte_message_information').empty();
-		$('#texte_message_information').append(msg);
-		// affiche la boîte de dialogue 'affichage_message_information'
-		$('#modalInformation').modal('show');
-	}
-
-	// affichage d'un avertissement avec une fenêtre modale
-	function afficher_avertissement(msg)
-	{
-		$('#texte_message_avertissement').empty();
-		$('#texte_message_avertissement').append(msg);
-		// affiche la boîte de dialogue 'affichage_message_avertissement' 
-		$('#modalAvertissement').modal('show');
-	}
-
-  });
+  <?php include_once('include/modal.js'); ?>
   </script>
 <!-- /Javascript -->
 
