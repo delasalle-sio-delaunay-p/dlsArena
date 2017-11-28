@@ -41,24 +41,26 @@
 							</div>
 															
 							<blockquote>
-								<h4><em>"Question 1 ?"</em></h4>
+								<h4><em>Comment s'inscrire à un tournoi ?</em></h4>
 							</blockquote>					
-							<p>Réponse 1</p>
-							
-							<blockquote>
-								<h4><em>"Question 2 ?"</em></h4>
-							</blockquote>					
-							<p>Réponse 2</p>
-							
-							<blockquote>
-								<h4><em>"Question 3 ?"</em></h4>
-							</blockquote>					
-							<p>Réponse 3</p>
+							<p>► Pour s'inscrire à un tournoi, il faut tout d'abord s'inscrire grâce au formulaire d'inscription afin de créer un compte. Il suffit ensuite de créer une équipe et de rejoindre un tournoi pour les jeux multis. Pour les jeux solo, comme Fifa 2018, vous pouvez vous inscrire seul. <b>Seuls les étudiants et étudiantes du pôle supérieur du lycée De La Salle sont autorisés à participer à la DLS Arena 5. </b></p>
 
 							<blockquote>
-								<h4><em>"Question 4 ?"</em></h4>
+								<h4><em>Quand commencent les tournois ?</em></h4>
 							</blockquote>					
-							<p>Réponse 4</p>
+							<p>► Les tournois commenceront le samedi 24 mars 2018 à 10 heures.</p>
+							
+							<blockquote>
+								<h4><em>Que faut-il amener ?</em></h4>
+							</blockquote>					
+							<p>► Vous pouvez venir sans matériel. Des postes, des écrans ainsi que des consoles de jeux et manettes seront à la disposition des participants. Vous êtes autorisé à apporter votre matériel (tour, console ou manette). </p>
+
+							<blockquote>
+								<h4><em>Je souhaite venir en tant que visiteur, c'est possible ?</em></h4>
+							</blockquote>					
+							<p>► Vous pouvez venir en tant que visiteur si vous êtes un(e) étudiant(e) du pôle supérieur du lycée.</p>
+
+
 																					
 						</div>
 					</div>
