@@ -43,6 +43,9 @@ echo $dao->ajouterUtilisateur($unUser);
 echo $ok = $dao->updateInfosConnexion(2);
 */
 
+/*
+echo $dao->getUserByLogin("admin")->toString();
+*/
 unset($dao);
 ?>
 

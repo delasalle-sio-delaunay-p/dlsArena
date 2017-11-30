@@ -52,17 +52,19 @@
 
 	</nav>
 
-
+	<?php if (isset($_SESSION['fullName'])) { ?>
+	    
 	<div class="nav-right">
 		<div class="nav-profile dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Prénom NOM</span></a>
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span><?php echo $_SESSION['fullName']; ?></span></a>
 		<ul class="dropdown-menu">
 			<li><a href=""><i class="fa fa-user"></i>Mon compte</a></li>
 			<li><a href="memberarea/settings"><i class="fa fa-gear"></i>Paramètres</a></li>
 			<li class="divider"></li>
-			<li><a href=""><i class="fa fa-power-off"></i>Se déconnecter</a></li>
+			<li><a href="logoff"><i class="fa fa-power-off"></i>Se déconnecter</a></li>
 		</ul>
 		</div>
 	</div>
-	
+	<?php
+    }?>
 </div>

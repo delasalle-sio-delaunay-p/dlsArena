@@ -276,6 +276,39 @@ class DAO
         
         return $ok;   
     }
+    
+    /***
+     * getUserByLogin - retourne un objet User à partir du login
+     * @param string $unLogin
+     * @return User
+     */
+    public function getUserByLogin($unLogin)
+    {// préparation de la requete
+        $txt_req = "Select * from users where login = :login";
+        
+        $req = $this->cnx->prepare($txt_req);
+        $req->bindValue("login", $unLogin, PDO::PARAM_STR);
+        // extraction des données
+        $req->execute();
+        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+              
+        $unId = utf8_encode($uneLigne->id);
+        $unLevel = utf8_encode($uneLigne->level);
+        $unFirstName = utf8_encode($uneLigne->firstname);
+        $unLastName = utf8_encode($uneLigne->lastname);
+        $unMail = utf8_encode($uneLigne->mail);
+        $unTel = utf8_encode($uneLigne->tel);
+        $unLogin = utf8_encode($uneLigne->login);
+        $unPassword = utf8_encode($uneLigne->password);
+            
+        $unUser = new User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword);
+            
+        // libère les ressources du jeu de données
+        $req->closeCursor();
+        // fourniture de la collection
+        return $unUser;
+ 
+    }
 
 
 }

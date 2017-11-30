@@ -20,6 +20,9 @@ $app->get('/index', function (Request $request, Response $response) {
     require ('vues/indexVue.php');
 });
 
+$app->get('/logoff', function (Request $request, Response $response) {
+    require ('controleurs/CtrlLogoff.php');
+});
 
 // Page contact
 

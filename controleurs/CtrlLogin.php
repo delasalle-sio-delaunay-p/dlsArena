@@ -21,6 +21,13 @@ if (isset($_POST['login']) && isset($_POST['password']) ) {
         
         $message = "Login OK !";
         $typeMessage = "information";
+
+        $user = $dao->getUserByLogin($login);
+        
+        $_SESSION['idUser'] = $user->getId();
+        $_SESSION['fullName'] = $user->getFirstName().' '.$user->getLastName();
+        $_SESSION['login'] = $user->getLogin();
+        
         include_once ('vues/indexVue.php');
     }
     else {
