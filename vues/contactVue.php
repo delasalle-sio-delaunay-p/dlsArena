@@ -57,7 +57,7 @@
 						</div>
 						<form action="contact" method="post">
 							<div class="form-group">
-								<input type="text" id="mail" name="mail" class="form-control" placeholder="Adresse mail" required>
+								<input type="text" id="mail" name="mail" class="form-control" placeholder="Adresse mail" pattern="^.+@.+$" required>
 							</div>
 							<div class="form-group">
 								<input type="text" id="sujet" name="sujet" class="form-control" placeholder="Sujet" required>
