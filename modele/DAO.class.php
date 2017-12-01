@@ -120,6 +120,52 @@ class DAO
 	    return $lesTeams;
 	}
 	
+	/***
+	 * getNews - retourne une collection d'objets News
+	 * @return news[]
+	 */
+	public function getNews()
+	{
+	    // préparation de la requete
+	    $txt_req = "Select * from news";
+	    
+	    $req = $this->cnx->prepare($txt_req);
+	    
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    
+	    // construction d'une collection d'objets News
+	    $lesNews = array();
+	    
+	    $dao = New DAO();
+	    
+	    // tant qu'une ligne est trouvée :
+	    while ($uneLigne)
+	    {  //objet News
+	        $unId = utf8_encode($uneLigne->id);
+	        $unTitle = utf8_encode($uneLigne->title);
+	        $unContent = utf8_encode($uneLigne->content);
+	        $unCreated = utf8_encode($uneLigne->created);
+	        $unAuthor = $dao->getUserFullNameById($uneLigne->id_users);
+	        $unNbComments = $dao->getNbCommentsById($unId);
+	        
+	        $uneNews = new News($unId, $unTitle, $unContent, $unCreated ,$unAuthor, $unNbComments);
+	        
+	        $lesNews[]= $uneNews;
+	        
+	        // extrait la ligne suivante
+	        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    }
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    
+	    unset($dao);
+	    // fourniture de la collection
+	    return $lesNews;
+   
+	}
+	
     /***
      * getTeamById - retourne un objet Team à partir de son id
      * @param int $unId
@@ -309,6 +355,53 @@ class DAO
         return $unUser;
  
     }
+    
+    /***
+     * getUserFullNameById - retourne le nom complet à partir d'un id
+     * @param int $unId
+     * @return string
+     */
+    public function getUserFullNameById($unId)
+    {// préparation de la requete
+        $txt_req = "Select * from users where id = :id";
+        
+        $req = $this->cnx->prepare($txt_req);
+        $req->bindValue("id", $unId, PDO::PARAM_STR);
+        // extraction des données
+        $req->execute();
+        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+        
+        $unFirstName = utf8_encode($uneLigne->firstname);
+        $unLastName = utf8_encode($uneLigne->lastname);
 
+        $fullName = $unFirstName.' '.$unLastName;
+        
+        // libère les ressources du jeu de données
+        $req->closeCursor();
+        
+        return $fullName;
+    }
+    
+    /***
+     * getNbCommentsById - retourne le nombre de commentaires correspondant à l'id de la news
+     * @param int $unId
+     * @return int
+     */
+    public function getNbCommentsById($unId)
+    {// préparation de la requete
+        $txt_req = "Select count(*) from news, comments WHERE comments.id_news = news.id and news.id = :id";
+        
+        $req = $this->cnx->prepare($txt_req);
+        $req->bindValue("id", $unId, PDO::PARAM_STR);
+        // extraction des données
+        $req->execute();
+        $nbComments = $req->fetchColumn(0);
+        
+        // libère les ressources du jeu de données
+        $req->closeCursor();
+        
+        return $nbComments;
+        
+    }
 
 }

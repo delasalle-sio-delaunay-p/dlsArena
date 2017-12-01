@@ -39,9 +39,13 @@
 				</li>
 
 				<li>
-					<a href="login" class="dropdown-toggle">Espace membre</a>
+					<a href="register" class="dropdown-toggle">Inscription</a>
 				</li>
-
+				
+				<li>
+					<a href="login" class="dropdown-toggle">Connexion</a>
+				</li>
+				
 				<li>
 					<a href="contact" class="dropdown-toggle">Contact</a>
 				</li>
@@ -58,13 +62,17 @@
 		<div class="nav-profile dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span><?php echo $_SESSION['fullName']; ?></span></a>
 		<ul class="dropdown-menu">
-			<li><a href=""><i class="fa fa-user"></i>Mon compte</a></li>
-			<li><a href="memberarea/settings"><i class="fa fa-gear"></i>Paramètres</a></li>
+			<li><a href="my-menu"><i class="fa fa-bars"></i>Retour menu</a></li>
+			<!--<li><a href="my-settings"><i class="fa fa-user"></i>Mon compte</a></li>-->
+			<li><a href="my-settings"><i class="fa fa-gear"></i>Paramètres</a></li>
 			<li class="divider"></li>
 			<li><a href="logoff"><i class="fa fa-power-off"></i>Se déconnecter</a></li>
 		</ul>
 		</div>
 	</div>
 	<?php
-    }?>
+    } else {?>
+    
+    
+    <?php }?>
 </div>

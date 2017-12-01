@@ -46,6 +46,15 @@ echo $ok = $dao->updateInfosConnexion(2);
 /*
 echo $dao->getUserByLogin("admin")->toString();
 */
+
+/*
+$lesNews = $dao->getNews();
+
+foreach ($lesNews as $uneNews)
+{
+    echo $uneNews->toString();
+}
+*/
 unset($dao);
 ?>
 

@@ -224,6 +224,16 @@ class Outils
 		// on retourne true si le numéro est bon, mais aussi si le numéro est vide :
 		if ( preg_match ( $EXPRESSION , $numTelAvalider) == true || $numTelAvalider == "" ) return true; else return false;
 	}
+	
+	public static function toDateTimeFR($DateTime) {
+	    $time = substr($DateTime,11);
+	    // extraction des 3 sous-chaines
+	    $jour = substr($DateTime,8,2);
+	    $mois = substr($DateTime,5,2);
+	    $annee = substr($DateTime,0,4);
+	    // renvoi de la concaténation du datetime au format français
+	    return $jour.'/'.$mois.'/'.$annee.' à '.$time;
+	}
 } // fin de la classe Outils
 // ATTENTION : on ne met pas de balise de fin de script pour ne pas prendre le risque
 // d'enregistrer d'espaces après la balise de fin de script !!!!!!!!!!!!

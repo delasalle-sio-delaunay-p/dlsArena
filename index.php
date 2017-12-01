@@ -54,7 +54,8 @@ $app->get('/register', function (Request $request, Response $response) {
 // Page des news
 
 $app->get('/news', function (Request $request, Response $response) {
-    require ('vues/newsVue.php'); 
+    //require ('vues/newsVue.php'); 
+    require ('controleurs/CtrlNewsDisplay.php');
 });
 
 // Page infos
