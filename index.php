@@ -63,6 +63,12 @@ $app->get('/infos', function (Request $request, Response $response) {
     require ('vues/informationsVue.php');
 });
 
+// Page mentions légales
+$app->get('/legal-mentions', function (Request $request, Response $response) {
+    require ('vues/mentionsLegalesVue.php');
+});
+        
+    
 // Page faq
 $app->get('/faq', function (Request $request, Response $response) {
    require ('vues/faqVue.php');

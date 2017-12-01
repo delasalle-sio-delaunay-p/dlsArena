@@ -6,7 +6,7 @@
 <!-- A propos -->
 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 <h4 class="title">DLS ARENA</h4>
-<p>Évènement sur une journée, consacré aux jeux vidéo et au monde vidéoludique, organisé le Samedi 25 Mars 2017 de 9h à 17h30.</p>
+<p>Évènement sur une journée, consacré aux jeux vidéo et au monde vidéoludique, organisé le Samedi 24 Mars 2018 de 9h à 17h30.</p>
 </div>
 <!-- /A propos -->
 
@@ -16,7 +16,7 @@
 <div class="row">
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">	
 <ul class="nav">
-<li><a href="" target="_blank">Mentions légales</a></li>
+<li><a href="legal-mentions">Mentions légales</a></li>
 <li><a href="https://discord.gg/awJurmh" target="_blank">Discord</a></li>
 </ul>
 </div>
