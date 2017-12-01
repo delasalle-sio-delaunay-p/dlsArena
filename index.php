@@ -58,6 +58,12 @@ $app->get('/news', function (Request $request, Response $response) {
     require ('controleurs/CtrlNewsDisplay.php');
 });
 
+$app->get('/news/{id}', function (Request $request, Response $response, $args) {
+    $newsId = $args['id'];
+    require ('vues/newsCommentairesVue.php');
+    
+});
+
 // Page infos
 $app->get('/infos', function (Request $request, Response $response) {
     require ('vues/informationsVue.php');
