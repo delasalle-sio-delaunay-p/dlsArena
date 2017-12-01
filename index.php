@@ -9,6 +9,7 @@ $app = new \Slim\App;
 
 include_once ('modele/DAO.class.php');
 include_once ('modele/Users.class.php');
+session_start();
 
 // Page d'accueil
 

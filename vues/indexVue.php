@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!-- HTML -->
 <!DOCTYPE html>
 <html lang="fr">

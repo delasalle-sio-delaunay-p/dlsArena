@@ -20,6 +20,6 @@ if ( isset($_SESSION['fullName']) ) {
     unset ($_SESSION['fullName']);
 }
 
-
+//session_destroy();
 
 include_once ('vues/indexVue.php');
