@@ -59,6 +59,9 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Modals-->
+		<?php include_once('include/modal.php'); ?>
 	</div>
 	<!-- /#wrapper -->
 	
@@ -72,6 +75,9 @@
 	<script src="vues/plugins/jquery/jquery-1.11.1.min.js"></script>
 	<script src="vues/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="vues/plugins/core.min.js"></script>
+	<script>
+  		<?php include_once('include/modal.js'); ?>
+  	</script>
 </body>
 
 </html>

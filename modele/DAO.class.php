@@ -255,7 +255,6 @@ class DAO
 	 */
 	public function ajouterUtilisateur($unUser) 
 	{  
-	    $unId = $unUser->getId();
 	    $unLevel = 1;
 	    $unFirstName = $unUser->getFirstName();
 	    $unLastName = $unUser->getLastName();
@@ -263,6 +262,7 @@ class DAO
 	    $unTel = $unUser->getTel();
 	    $unLogin = $unUser->getLogin();
 	    $unPassword = $unUser->getPassword();
+	    $unIdClasse = $unUser->getIdClasse();
 	    
 	    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 	        $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -273,10 +273,9 @@ class DAO
 	    }
 	    
 	    // préparation de la requete
-	    $txt_req = "INSERT INTO users (id, level, firstname, lastname, mail, tel, login, password, ipAdress)";
-	    $txt_req .= " VALUES (:id, :level, :firstname, :lastname, :mail, :tel, :login, :password, :ip)";
+	    $txt_req = "INSERT INTO users ( level, firstname, lastname, mail, tel, login, password, ipAdress, id_classes)";
+	    $txt_req .= " VALUES (:level, :firstname, :lastname, :mail, :tel, :login, :password, :ip, :idclasse)";
 	    $req = $this->cnx->prepare($txt_req);
-	    $req->bindValue("id", $unId, PDO::PARAM_STR);
 	    $req->bindValue("level", $unLevel, PDO::PARAM_STR);
 	    $req->bindValue("firstname", $unFirstName, PDO::PARAM_STR);
 	    $req->bindValue("lastname", $unLastName, PDO::PARAM_STR);
@@ -285,12 +284,36 @@ class DAO
 	    $req->bindValue("login", $unLogin, PDO::PARAM_STR);
 	    $req->bindValue("password", sha1($unPassword), PDO::PARAM_STR);
 	    $req->bindValue("ip", $ip, PDO::PARAM_STR);
-	    
+	    $req->bindValue("idclasse", $unIdClasse, PDO::PARAM_STR);
 	    // extraction des données
 	    $ok = $req->execute();
 	    
 	    return $ok;
 	    
+	}
+	
+	/***
+	 * existeUtilisateur - retourne un booléen pour savoir si un utilisateur existe déjà dans la bdd
+	 * @param string $unLogin
+	 * @return boolean
+	 */
+	public function existeUtilisateur($unLogin)
+	{	// préparation de la requete de recherche
+	    $txt_req = "Select count(*) from users where login = :login";
+	    $req = $this->cnx->prepare($txt_req);
+	    // liaison de la requête et de ses paramètres
+	    $req->bindValue("login", $unLogin, PDO::PARAM_STR);
+	    // exécution de la requete
+	    $req->execute();
+	    $nbReponses = $req->fetchColumn(0);
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    
+	    // fourniture de la réponse
+	    if ($nbReponses == 0)
+	        return false;
+	    else
+	        return true;
 	}
 
 	/***

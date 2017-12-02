@@ -51,6 +51,9 @@ $app->get('/register', function (Request $request, Response $response) {
     require ('vues/inscriptionVue.php');
 });
 
+$app->post('/register', function (Request $request, Response $response) {
+    require ('controleurs/CtrlInscription.php');
+});
 // Page des news
 
 $app->get('/news', function (Request $request, Response $response) {

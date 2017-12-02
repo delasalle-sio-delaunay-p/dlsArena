@@ -75,7 +75,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 margin-top-30">
 						<div class="thumbnail">
 							<h4 class="thumbnail-title">Mickaël C.</h4>
-							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/04/Image-1-268x200.jpg" alt="">
+							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/04/Image-2-268x200.jpg" alt="">
 							<div class="caption">
 								<p>Développeur web, data scientist.</p>
 								<a href="http://www.lycee-delasalle.com/"><button type="button" class="btn btn-block btn-primary btn-rounded">Plus d'infos</button></a>
@@ -86,7 +86,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 margin-top-30">
 						<div class="thumbnail">
 							<h4 class="thumbnail-title">Olivier M.</h4>
-							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/04/Image-1-268x200.jpg" alt="">
+							<img src="https://www.printerland.co.uk/blog/wp-content/uploads/2017/05/iStock-471854446-268x200.jpg" alt="">
 							<div class="caption">
 								<p>SCRUM Master.</p>
 								<a href="http://www.lycee-delasalle.com/"><button type="button" class="btn btn-block btn-primary btn-rounded">Plus d'infos</button></a>

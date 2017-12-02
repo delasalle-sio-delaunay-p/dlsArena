@@ -37,7 +37,7 @@ echo $dao->getInitialsById(1);
 */
 
 /*
-$unUser = new User(2, 2, "Christophe", "Robert", "posteprof2@lycee-dls.com", "0299133792", "prof2", sha1("mpnom2") );
+$unUser = new User(3, 2, "Christophe", "Robert", "posteprof2@lycee-dls.com", "0299133792", "prof2", sha1("mpnom2"), 1);
 echo $dao->ajouterUtilisateur($unUser);
 
 echo $ok = $dao->updateInfosConnexion(2);
@@ -54,7 +54,11 @@ foreach ($lesNews as $uneNews)
 {
     echo $uneNews->toString();
 }
+
+$ok = $dao->existeUtilisateur("admin");
+var_dump($ok);
 */
+
 unset($dao);
 ?>
 

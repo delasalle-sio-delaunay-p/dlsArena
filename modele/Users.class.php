@@ -13,12 +13,16 @@ class User
 	private $tel;				// numéro de téléphone de l'utilisateur
 	private $login;				// nom de l'utilisateur
 	private $password;			// mot de passe de l'utilisateur
+	private $idClasse;          // identifiant de la classe de l'utilisateur
 	
 	// ------------------------------------------------------------------------------------------------------
 	// ----------------------------------------- Constructeur -----------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
 	
-	public function User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword) {
+	/*
+	 * Constructeurs avec 9 paramètres
+	 */
+	public function User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword, $unIdClasse) {
 		$this->id = $unId;
 		$this->level = $unLevel;
 		$this->firstname = $unFirstName;
@@ -27,8 +31,9 @@ class User
 		$this->tel = $unTel;
 		$this->login = $unLogin;
 		$this->password = $unPassword;
-	}	
-	
+		$this->idClasse = $unIdClasse;
+	}
+		
 	// ------------------------------------------------------------------------------------------------------
 	// ---------------------------------------- Getters et Setters ------------------------------------------
 	// ------------------------------------------------------------------------------------------------------
@@ -56,7 +61,9 @@ class User
 
 	public function getPassword()	{return $this->password;}
 	public function setPassword($unPassword) {$this->password = $unPassword;}
-	
+
+	public function getIdClasse()	{return $this->idClasse;}
+	public function setIdClasse($unIdClasse) {$this->idClasse = $unIdClasse;}
 	
 	// ------------------------------------------------------------------------------------------------------
 	// -------------------------------------- Méthodes d'instances ------------------------------------------
@@ -73,6 +80,7 @@ class User
 		$msg .= 'niveau : ' . $this->getLevel() . '<br>';
 		$msg .= 'login : ' . $this->getLogin() . '<br>';
 		$msg .= 'password : ' . $this->getPassword() . '<br>';
+		$msg .= 'id classe : ' . $this->getIdClasse() . '<br>';
 		$msg .= '<br>';
 		
 		return $msg;
