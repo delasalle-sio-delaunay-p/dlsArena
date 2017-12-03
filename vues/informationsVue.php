@@ -30,7 +30,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="post post-fl">
-							<!-- <div class="post-thumbnail">
+							<!--<div class="post-thumbnail">
 								<img src="vues/img/content/fl.jpg" alt="">
 							</div>-->
 							<div class="post-header">
@@ -38,16 +38,11 @@
 									<h2>Informations générales</h2>
 								</div>
 							</div>
-							<p>AAAAAA</p>
-								
-							<blockquote>
-								<h4>La citation du jour : </h4>
-								<p><em>"Mais cassez-vous !"</em></p>
-								<footer>Lala Rakotoarison <cite title="Source Title">Professeur d'éco, droit, management</cite></footer>
-							</blockquote>
-										
-							<p>BBBBBBBBBB</p>
-							<p>CCCCCCCCCC</p>
+							<p>La DLS Arena V5 est un événement sur une journée, consacré aux jeux vidéo et au monde vidéoludique, organisé le Samedi 24 Mars 2018 de 9h à 17h00 dans la salle de conférence du Lycée De La Salle par un groupe d'étudiants de SIO 2. Cette journée est réservée aux étudiants du pôle supérieur du Lycée. L'entrée pour l'événement est gratuite.</p>
+			
+							<p>Pour la 5ème édition vous pourrez retrouver les jeux suivants : League Of Legends, Counter-Strike:GO, Fifa 2018, Rocket League, Pokémon Showdown. Pour vous inscrire aux différents tournoirs, il vous suffit de créer un compte sur notre site.</p>
+							
+							<p>L'équipe organisatrice, composée de 5 élèves, répondra et restera disponible pour toutes vos questions éventuelles.</p>
 						</div>
 					</div>
 				</div>		
