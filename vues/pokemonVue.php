@@ -49,7 +49,6 @@
 							</div>
 							<p>Version du jeu : 0000.</p>
 							<p>Format du tournoi : 1 contre 1, double elimination bracket.</p>
-							<p>Les joueurs bannis par Steam ne pourront pas participer au tournoi.</p>
 						</div>
 					</div>
 				</div>		

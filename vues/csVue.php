@@ -39,20 +39,14 @@
 								</div>
 							</div>
 							<p>Counter-Strike (du mot anglais counterstrike, que l'on pourrait traduire par « contre-attaque »), ou l'abréviation CS, est un jeu de tir à la première personne multijoueur en ligne basé sur le principe du jeu en équipe. C'est une modification complète du jeu Half-Life de Valve, réalisée par Minh Le et Jess Cliffe, dont la première version est sortie le 18 juin 1999. Le jeu fait s'affronter une équipe de terroristes et d'antiterroristes au cours de plusieurs manches. Les joueurs marquent des points en accomplissant les objectifs de la carte de jeu et en éliminant leurs adversaires, dans le but de faire gagner leur équipe.</p>
-								
-							<blockquote>
-								<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-								<p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique ligula a erat rhoncus, eget egestas quam dignissim. Cras accumsan diam non efficitur consequat."</em></p>
-								<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-							</blockquote>
-										
+																		
 							<p>Le jeu, en version 1.6 depuis septembre 2003, a connu depuis sa sortie officielle le 8 novembre 2000 un important succès. Début 2010, Counter-Strike était encore le jeu de tir à la première personne le plus joué en ligne, devant des jeux plus récents tels que son évolution Counter-Strike: Source. La fréquentation du jeu finira néanmoins par baisser progressivement avec l'avènement de la scène professionnelle de Counter-Strike: Global Offensive qui est aujourd'hui le jeu le plus joué de cette série.</p>
 							<div class="post-header">
 								<div class="post-title">
 									<h2>Informations sur le tournoi</h2>
 								</div>
 							</div>
-							<p>Version du jeu : 0000.</p>
+							<p>Version du jeu : CS:GO / Steam.</p>
 							<p>Format du tournoi : 5 contre 5, double elimination bracket.</p>
 							<p>Map pool : infero, mirage, cache, overpass, nuke, cobblestone, train.</p>
 							<p>Les joueurs VAC Banned ne pourront pas participer au tournoi.</p>

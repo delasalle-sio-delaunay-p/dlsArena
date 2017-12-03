@@ -47,7 +47,7 @@
 									<h2>Informations sur le tournoi</h2>
 								</div>
 							</div>
-							<p>Version du jeu : 0000, PS4.</p>
+							<p>Version du jeu : PS4.</p>
 							<p>Format du tournoi : 3 contre 3, double elimination bracket.</p>
 							<p>Les joueurs bannis par Steam ne pourront pas participer au tournoi.</p>
 						</div>

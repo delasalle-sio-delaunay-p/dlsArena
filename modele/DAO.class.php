@@ -369,8 +369,8 @@ class DAO
         $unTel = utf8_encode($uneLigne->tel);
         $unLogin = utf8_encode($uneLigne->login);
         $unPassword = utf8_encode($uneLigne->password);
-            
-        $unUser = new User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword);
+        $unIdClasse = utf8_encode($uneLigne->id_classes);
+        $unUser = new User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword, $unIdClasse);
             
         // libère les ressources du jeu de données
         $req->closeCursor();

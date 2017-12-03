@@ -39,13 +39,7 @@
 								</div>
 							</div>
 							<p>FIFA Football (également connu sous le nom FIFA Soccer ou simplement FIFA) est le nom générique d’une série de jeux vidéo de football édité à l’origine par Electronic Arts en 1993 et développé par la suite sous la forme d’une franchise.</p>
-								
-							<blockquote>
-								<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-								<p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique ligula a erat rhoncus, eget egestas quam dignissim. Cras accumsan diam non efficitur consequat."</em></p>
-								<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-							</blockquote>
-										
+																	
 							<p>FIFA 18 est un jeu vidéo de football développé par EA Canada et édité par EA Sports, sorti le 29 septembre 2017 sur PlayStation 3, PlayStation 4, Xbox 360, Xbox One, PC et Nintendo Switch. Il s'agit du vingt-cinquième opus de la franchise FIFA développé par EA Sports. L'international portugais Cristiano Ronaldo figure sur la jaquette du jeu. L'ancien footballeur brésilien Ronaldo apparaît sur l'édition Icône du jeu.</p>
 
 							<div class="post-header">
@@ -53,9 +47,8 @@
 									<h2>Informations sur le tournoi</h2>
 								</div>
 							</div>
-							<p>Version du jeu : 0000, PS4.</p>
+							<p>Version du jeu : PS4.</p>
 							<p>Format du tournoi : 1 contre 1, matchs de poule puis single elimination bracket.</p>
-							<p>Les joueurs bannis par Riot Games ne pourront pas participer au tournoi.</p>
 						</div>
 					</div>
 				</div>		

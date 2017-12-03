@@ -39,7 +39,7 @@ else {
         
         $message = "Inscription terminée. <br/> Vous pouvez à présent vous connecter.";
         $typeMessage = "information";
-        include_once ('vues/loginVue.php');
+        include_once ('vues/indexVue.php');
         
         
     }

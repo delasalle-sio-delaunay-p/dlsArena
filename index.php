@@ -9,6 +9,7 @@ $app = new \Slim\App;
 
 include_once ('modele/DAO.class.php');
 include_once ('modele/Users.class.php');
+
 session_start();
 
 // Page d'accueil
@@ -41,7 +42,7 @@ $app->get('/login', function (Request $request, Response $response) {
     require ('vues/loginVue.php');
 });
 
-$app->post('/login', function () {
+$app->post('/login', function (Request $request, Response $response) {
     require ('controleurs/CtrlLogin.php');
 });
 
@@ -91,6 +92,21 @@ $app->get('/team', function (Request $request, Response $response) {
 // Page menu membre
 $app->get('/my-menu', function (Request $request, Response $response) {
     require ('vues/menuMembreVue.php');
+});
+
+// Page contact admin - zone membre
+$app->get('/contact-admin', function (Request $request, Response $response) {
+    require ('vues/contactAdminVue.php');
+});
+
+// Page contact admin - zone membre
+$app->get('/change-password', function (Request $request, Response $response) {
+    require ('vues/changerPasswordVue.php');
+});
+
+// Page parametres du compte
+$app->get('/my-settings', function (Request $request, Response $response) {
+    require ('controleurs/CtrlParamsCompte.php');
 });
 
 // Page jeux CS

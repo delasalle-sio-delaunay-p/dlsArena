@@ -36,21 +36,24 @@
 			<div class="container">
 					<h3>Gérer mon compte</h3>
 					<br/>
-					<button type="button" class="btn btn-primary btn-icon-right">Paramètres du compte<i class="fa fa-cog"></i></button>
-					<button type="button" class="btn btn-primary btn-icon-right">Contacter un administrateur<i class="fa fa-whatsapp"></i></button>
+					<a href="my-settings"><button type="button" class="btn btn-primary btn-icon-right">Paramètres du compte<i class="fa fa-cog"></i></button></a>
+					<a href="change-password"><button type="button" class="btn btn-primary btn-icon-right">Changer mon mot de passe<i class="fa fa-send"></i></button></a>
+					<a href="contact-admin"><button type="button" class="btn btn-primary btn-icon-right">Contacter un administrateur<i class="fa fa-whatsapp"></i></button></a>
 					<br/><br/>
 
 					<h3>Inscription à la DLS Arena 5</h3>
 					<br/>
-					<button type="button" class="btn btn-success btn-icon-right">S'inscrire à un tournoi<i class="fa fa-check-square-o"></i></button>
+					<button type="button" class="btn btn-success btn-icon-right">Inscription individuel<i class="fa fa-check-square-o"></i></button>
 					<button type="button" class="btn btn-success btn-icon-right">Se désinscrire<i class="fa fa-cog"></i></button>
+					<button type="button" class="btn btn-success btn-icon-right">Récapitulatif de l'inscription<i class="fa fa-inbox"></i></button>
 					<br/><br/>
 
 					<h3>Gérer mon équipe</h3>
 					<br/>
+					<button type="button" class="btn btn-danger btn-icon-right">S'inscrire en équipe <i class="fa fa-check-square-o"></i></button>
 					<button type="button" class="btn btn-danger btn-icon-right">Rejoindre une équipe <i class="fa fa-users"></i></button>
 					<button type="button" class="btn btn-danger btn-icon-right">Gérer mon équipe <i class="fa fa-cog"></i></button>
-					<button type="button" class="btn btn-danger btn-icon-right">Supprimer mon équipe <i class="fa fa-trash-o"></i></button>
+					<button type="button" class="btn btn-danger btn-icon-right">Récapitulatif de l'inscription<i class="fa fa-inbox"></i></button>
 					<br/><br/>
 			</div>
 		</section>

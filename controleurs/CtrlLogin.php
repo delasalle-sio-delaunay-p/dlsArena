@@ -24,11 +24,15 @@ if (isset($_POST['login']) && isset($_POST['password']) ) {
 
         $user = $dao->getUserByLogin($login);
         
+        $dao->updateInfosConnexion($user->getId());
+        
         $_SESSION['idUser'] = $user->getId();
         $_SESSION['fullName'] = $user->getFirstName().' '.$user->getLastName();
         $_SESSION['login'] = $user->getLogin();
+        $_SESSION['levelUser'] = $user->getLevel();
         
         include_once ('vues/indexVue.php');
+
     }
     else {
         $message = "Identifiant ou mot de passe incorrect !";

@@ -39,13 +39,7 @@
 								</div>
 							</div>
 							<p>League of Legends (abrégé LoL, anciennement nommé League of Legends: Clash of Fates) est un jeu vidéo de type arène de bataille en ligne (MOBA) gratuit développé et édité par Riot Games sur Windows1 et Mac OS X. Fin janvier 2013, un nouveau client bêta pour Mac a été distribué par Riot Games. Le jeu a été évoqué pour la première fois le 8 octobre 2008 et est entré en phase bêta le 10 avril 20093.</p>
-								
-							<blockquote>
-								<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-								<p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique ligula a erat rhoncus, eget egestas quam dignissim. Cras accumsan diam non efficitur consequat."</em></p>
-								<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-							</blockquote>
-										
+																
 							<p>Deux concepteurs du mod très populaire de Warcraft III, Defense of the Ancients: Allstars (plus connu sous son abréviation DotA), Steve « Guinsoo » Feak et Steve « Pendragon » Mescon, ont rejoint Riot Games pour la réalisation de League of Legends, d'où une forte similitude avec DotA. Pendragon, le directeur des relations communautés chez Riot Games, a participé à la création du site Internet de DotA: Allstars ainsi qu'à ses forums.</p>
 
 							<p>League of Legends devient rapidement un véritable phénomène. C'est en 2013 qu'il devient l'un des jeux les plus joués au monde4. Il séduit aussi le monde du sport électronique en devenant l'événement eSport le plus regardé de l'histoire, avec plus de 32 millions de spectateurs en ligne et plus de 8,5 millions de vues simultanées lors de la finale de la saison 3 du championnat du monde en 20135. Le record est de nouveau battu en 2015, lors de la saison 5, avec un total de 36 millions de spectateurs et un pic d'audience de 14 millions de spectateurs6 puis en 2016, lors de la saison 6, avec un total de 43 millions de spectateurs et un pic d'audience de 14,7 millions de spectateurs.</p>
