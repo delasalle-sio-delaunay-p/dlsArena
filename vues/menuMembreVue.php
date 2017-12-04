@@ -43,8 +43,8 @@
 
 					<h3>Inscription à la DLS Arena 5</h3>
 					<br/>
-					<button type="button" class="btn btn-success btn-icon-right">Inscription individuel<i class="fa fa-check-square-o"></i></button>
-					<button type="button" class="btn btn-success btn-icon-right">Se désinscrire<i class="fa fa-cog"></i></button>
+					<a href="solo-registration"><button type="button" class="btn btn-success btn-icon-right">Inscription individuelle<i class="fa fa-check-square-o"></i></button></a>
+					<a href="cancel-solo-registration"><button type="button" class="btn btn-success btn-icon-right">Se désinscrire<i class="fa fa-cog"></i></button></a>
 					<button type="button" class="btn btn-success btn-icon-right">Récapitulatif de l'inscription<i class="fa fa-inbox"></i></button>
 					<br/><br/>
 

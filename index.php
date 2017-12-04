@@ -109,6 +109,16 @@ $app->get('/my-settings', function (Request $request, Response $response) {
     require ('controleurs/CtrlParamsCompte.php');
 });
 
+// Page inscription individuel
+$app->get('/solo-registration', function (Request $request, Response $response) {
+    require ('controleurs/CtrlSoloRegistration.php');
+});
+ 
+// Page annuler inscription individuel
+$app->get('/cancel-solo-registration', function (Request $request, Response $response) {
+   require ('controleurs/CtrlCancelSoloRegistration.php');
+});
+    
 // Page jeux CS
 $app->get('/cs', function (Request $request, Response $response) {
    require ('vues/csVue.php');

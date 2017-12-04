@@ -14,6 +14,7 @@ include_once ('Comments.class.php');
 include_once ('Games.class.php');
 include_once ('Teams.class.php');
 include_once ('Classes.class.php');
+include_once ('SoloReg.class.php');
 
 
 // début de la classe DAO (Data Access Object)
@@ -165,6 +166,10 @@ class DAO
    
 	}
 	
+	/***
+	 * getSoloGames - retourne une collection (Game) d'objet des jeux solo
+	 * @return Game[]
+	 */
 	public function getSoloGames()
 	{  // préparation de la requete
 	    $txt_req = "Select * from games where playersNumber = 1";
@@ -176,23 +181,21 @@ class DAO
 	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
 	    
 	    // construction d'une collection d'objets News
-	    $lesNews = array();
+	    $lesSoloGames = array();
 	    
 	    $dao = New DAO();
 	    
 	    // tant qu'une ligne est trouvée :
 	    while ($uneLigne)
-	    {  //objet News
+	    {  //objet Game
 	        $unId = utf8_encode($uneLigne->id);
-	        $unTitle = utf8_encode($uneLigne->title);
-	        $unContent = utf8_encode($uneLigne->content);
-	        $unCreated = utf8_encode($uneLigne->created);
-	        $unAuthor = $dao->getUserFullNameById($uneLigne->id_users);
-	        $unNbComments = $dao->getNbCommentsById($unId);
+	        $unName = utf8_encode($uneLigne->name);
+	        $unPlayersNumber = utf8_encode($uneLigne->playersNumber);
+	        $unPlatform = utf8_encode($uneLigne->platform);
 	        
-	        $uneNews = new News($unId, $unTitle, $unContent, $unCreated ,$unAuthor, $unNbComments);
+	        $unSoloGame = new Game($unId, $unName, $unPlayersNumber, $unPlatform);
 	        
-	        $lesNews[]= $uneNews;
+	        $lesSoloGames[]= $unSoloGame;
 	        
 	        // extrait la ligne suivante
 	        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
@@ -202,14 +205,82 @@ class DAO
 	    
 	    unset($dao);
 	    // fourniture de la collection
-	    return $lesNews;
+	    return $lesSoloGames;
+	}
+	
+	/***
+	 * getTeamGames - retourne une collection d'objet (Game) des jeux en équipe
+	 * @return Game[]
+	 */
+	public function getTeamGames()
+	{  // préparation de la requete
+	    $txt_req = "Select * from games where playersNumber > 1";
+	    
+	    $req = $this->cnx->prepare($txt_req);
+	    
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    
+	    // construction d'une collection d'objets News
+	    $lesTeamGames = array();
+	    
+	    $dao = New DAO();
+	    
+	    // tant qu'une ligne est trouvée :
+	    while ($uneLigne)
+	    {  //objet Game
+	        $unId = utf8_encode($uneLigne->id);
+	        $unName = utf8_encode($uneLigne->name);
+	        $unPlayersNumber = utf8_encode($uneLigne->playersNumber);
+	        $unPlatform = utf8_encode($uneLigne->platform);
+	        
+	        $unTeamGame = new Game($unId, $unName, $unPlayersNumber, $unPlatform);
+	        
+	        $lesTeamGames[]= $unTeamGame;
+	        
+	        // extrait la ligne suivante
+	        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    }
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    
+	    unset($dao);
+	    // fourniture de la collection
+	    return $lesTeamGames; 
+	}
+	
+	public function getSoloRegByLogin()
+	{// préparation de la requete
+	    $txt_req = "Select * from games where playersNumber > 1";
+	    
+	    $req = $this->cnx->prepare($txt_req);
+	    
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    
+	    // construction d'une collection d'objets News
+	    $lesTeamGames = array();
+	    
+	    $dao = New DAO();
+
+	    $unId = utf8_encode($uneLigne->id);
+	    $unName = utf8_encode($uneLigne->name);
+	    $unPlayersNumber = utf8_encode($uneLigne->playersNumber);
+	    $unPlatform = utf8_encode($uneLigne->platform);
+	        
+	    $uneSoloReg = new SoloReg($unId, $unName, $unPlayersNumber, $unPlatform);
+   
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    
+	    unset($dao);
+	    // fourniture de la collection
+	    return $uneSoloReg;
 	    
 	}
 	
-	public function getTeamGames()
-	{
-	    
-	}
     /***
      * getTeamById - retourne un objet Team à partir de son id
      * @param int $unId

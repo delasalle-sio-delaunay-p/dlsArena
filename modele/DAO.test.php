@@ -59,6 +59,15 @@ $ok = $dao->existeUtilisateur("admin");
 var_dump($ok);
 */
 
+/*
+$soloGames = $dao->getSoloGames();
+
+foreach ($soloGames as $oneGame)
+{
+    echo $oneGame->toString();
+}
+*/
+
 unset($dao);
 ?>
 
