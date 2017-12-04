@@ -125,8 +125,7 @@ class DAO
 	 * @return news[]
 	 */
 	public function getNews()
-	{
-	    // préparation de la requete
+	{  // préparation de la requete
 	    $txt_req = "Select * from news";
 	    
 	    $req = $this->cnx->prepare($txt_req);
@@ -166,6 +165,51 @@ class DAO
    
 	}
 	
+	public function getSoloGames()
+	{  // préparation de la requete
+	    $txt_req = "Select * from games where playersNumber = 1";
+	    
+	    $req = $this->cnx->prepare($txt_req);
+	    
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    
+	    // construction d'une collection d'objets News
+	    $lesNews = array();
+	    
+	    $dao = New DAO();
+	    
+	    // tant qu'une ligne est trouvée :
+	    while ($uneLigne)
+	    {  //objet News
+	        $unId = utf8_encode($uneLigne->id);
+	        $unTitle = utf8_encode($uneLigne->title);
+	        $unContent = utf8_encode($uneLigne->content);
+	        $unCreated = utf8_encode($uneLigne->created);
+	        $unAuthor = $dao->getUserFullNameById($uneLigne->id_users);
+	        $unNbComments = $dao->getNbCommentsById($unId);
+	        
+	        $uneNews = new News($unId, $unTitle, $unContent, $unCreated ,$unAuthor, $unNbComments);
+	        
+	        $lesNews[]= $uneNews;
+	        
+	        // extrait la ligne suivante
+	        $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    }
+	    // libère les ressources du jeu de données
+	    $req->closeCursor();
+	    
+	    unset($dao);
+	    // fourniture de la collection
+	    return $lesNews;
+	    
+	}
+	
+	public function getTeamGames()
+	{
+	    
+	}
     /***
      * getTeamById - retourne un objet Team à partir de son id
      * @param int $unId
