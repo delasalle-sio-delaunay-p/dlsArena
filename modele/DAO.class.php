@@ -250,9 +250,9 @@ class DAO
 	    return $lesTeamGames; 
 	}
 	
-	public function getSoloRegByLogin()
+	public function getSoloRegByLogin($unLogin)
 	{// préparation de la requete
-	    $txt_req = "Select * from games where playersNumber > 1";
+	    $txt_req = "Select * from solo_registrations where id_users = (SELECT id from users where login = :login)";
 	    
 	    $req = $this->cnx->prepare($txt_req);
 	    
@@ -260,17 +260,14 @@ class DAO
 	    $req->execute();
 	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
 	    
-	    // construction d'une collection d'objets News
-	    $lesTeamGames = array();
-	    
 	    $dao = New DAO();
 
 	    $unId = utf8_encode($uneLigne->id);
-	    $unName = utf8_encode($uneLigne->name);
-	    $unPlayersNumber = utf8_encode($uneLigne->playersNumber);
-	    $unPlatform = utf8_encode($uneLigne->platform);
+	    $unStatus = utf8_encode($uneLigne->status);
+	    $unIdUser = utf8_encode($uneLigne->id_users);
+	    $unIdGame= utf8_encode($uneLigne->id_games);
 	        
-	    $uneSoloReg = new SoloReg($unId, $unName, $unPlayersNumber, $unPlatform);
+	    $uneSoloReg = new SoloReg($unId, $unStatus, $unIdUser, $unIdGame);
    
 	    // libère les ressources du jeu de données
 	    $req->closeCursor();
