@@ -250,34 +250,107 @@ class DAO
 	    return $lesTeamGames; 
 	}
 	
+    /***
+     * getSoloRegByLogin - retourne une collection d'objets SoloReg à partir du login
+     * @param string $unLogin
+     * @return SoloReg[]
+     */
 	public function getSoloRegByLogin($unLogin)
 	{// préparation de la requete
 	    $txt_req = "Select * from solo_registrations where id_users = (SELECT id from users where login = :login)";
 	    
 	    $req = $this->cnx->prepare($txt_req);
+	    $req->bindValue("login", $unLogin, PDO::PARAM_STR);
 	    
 	    // extraction des données
 	    $req->execute();
 	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
 	    
+	    $lesSoloReg = array();
+	    
 	    $dao = New DAO();
-
-	    $unId = utf8_encode($uneLigne->id);
-	    $unStatus = utf8_encode($uneLigne->status);
-	    $unIdUser = utf8_encode($uneLigne->id_users);
-	    $unIdGame= utf8_encode($uneLigne->id_games);
-	        
-	    $uneSoloReg = new SoloReg($unId, $unStatus, $unIdUser, $unIdGame);
-   
+	    
+        while ($uneLigne) 
+        {
+    	    $unId = utf8_encode($uneLigne->id);
+    	    $unStatus = utf8_encode($uneLigne->status);
+    	    $unIdUser = utf8_encode($uneLigne->id_users);
+    	    $unIdGame= utf8_encode($uneLigne->id_games);
+    	        
+    	    $uneSoloReg = new SoloReg($unId, $unStatus, $unIdUser, $unIdGame);
+    	    
+    	    $lesSoloReg[]= $uneSoloReg;
+    	    
+    	    // extrait la ligne suivante
+    	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+        }
 	    // libère les ressources du jeu de données
 	    $req->closeCursor();
 	    
 	    unset($dao);
 	    // fourniture de la collection
-	    return $uneSoloReg;
+	    return $lesSoloReg;
 	    
 	}
 	
+	/***
+	 * getGameNameById - retourne le nom du jeu à partir de son id
+	 * @param int $unId
+	 * @return string
+	 */
+	public function getGameNameById($unId)
+	{  // préparation de la requete
+	    $txt_req = "Select * from games where id = :id";
+	    $req = $this->cnx->prepare($txt_req);
+	    $req->bindValue("id", $unId, PDO::PARAM_STR);
+	    
+	    // extraction des données
+	    $req->execute();
+	    $uneLigne = $req->fetch(PDO::FETCH_OBJ);
+	    
+	    $unName = utf8_encode($uneLigne->name);
+	    
+	    return $unName;    
+	}
+	
+	
+	/***
+	 * getRandomPassword - génère un nouveau mot de passe
+	 * @param int $nb_car
+	 * @return string
+	 */
+	public function getRandomPassword($nb_car)
+	{
+	    $chaine = 'azertyuiopqsdfghjklmwxcvbn';
+	    $nb_lettres = strlen($chaine) - 1;
+	    $generation = '';
+	    for($i=0; $i < $nb_car; $i++)
+	    {
+	        $pos = mt_rand(0, $nb_lettres);
+	        $car = $chaine[$pos];
+	        $generation .= $car;
+	    }
+	    return $generation;
+	}
+	
+	public function updatePassword($mail)
+	{  
+	    $dao = new DAO();
+	    $pw = $dao->getRandomPassword(8);
+	    
+	    // préparation de la requete
+	    $txt_req = "Update users set password = :pw where mail = :mail";
+	    $req = $this->cnx->prepare($txt_req);
+	    $req->bindValue("pw", sha1($pw), PDO::PARAM_STR);
+	    $req->bindValue("mail", $mail, PDO::PARAM_STR);
+	    
+	    // extraction des données
+	    $ok = $req->execute();
+	    
+	    unset($dao);
+	    return $ok;
+	    
+	}
     /***
      * getTeamById - retourne un objet Team à partir de son id
      * @param int $unId
@@ -299,8 +372,7 @@ class DAO
 	    $unPassword = utf8_encode($uneLigne->password);
 	    
 	    $uneTeam = new Team($unId, $unName, $unCreatedBy, $unPassword);
-	    return $uneTeam;  
-	    
+	    return $uneTeam;      
 	}
 	
 	/***

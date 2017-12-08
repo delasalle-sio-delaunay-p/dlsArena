@@ -5,9 +5,7 @@
 
 include_once('include/head.php'); 
 include_once('modele/DAO.Class.php');
-$dao = new DAO();
-$lesClasses = $dao->getClasses();
-unset($dao);
+
 ?>
 </head>
 
@@ -64,11 +62,11 @@ unset($dao);
 					      <div class="col-sm-10">
 						      <select name="game" class="form-control" required>
 						        <?php 
-                                    foreach ($soloGames as $oneGame)
+                                    foreach ($soloRegs as $oneSoloReg)
                                     {
-
-                                        echo "<option value=".$oneGame->getId().">".$oneGame->getName()." - ".$oneGame->getPlatform()."</option>";
-                                        
+                                    	$dao = new DAO();
+                                        echo "<option value=".$oneSoloReg->getId()."> Inscription n° ".$oneSoloReg->getId()." - ".$oneSoloReg->getStatus()." - ".$dao->getGameNameById($oneSoloReg->getId())."</option>";
+                                        unset($dao);
                                     }
                                 ?>
 						      </select>
@@ -78,7 +76,7 @@ unset($dao);
 
 						  <div class="form-group row">
 						    <div class="col-sm-10">
-						      <button type="submit" class="btn btn-primary">S'inscrire</button>
+						      <button type="submit" class="btn btn-primary">Annuler l'inscription</button>
 						    </div>
 						  </div>
 						</form>

@@ -46,6 +46,11 @@ $app->post('/login', function (Request $request, Response $response) {
     require ('controleurs/CtrlLogin.php');
 });
 
+// Page d'oubli de mot de passe
+$app->get('/password-reset', function (Request $request, Response $response) {
+    require ('vues/changerPasswordVue.php');
+});
+
 // Page d'inscription
 
 $app->get('/register', function (Request $request, Response $response) {
@@ -118,7 +123,12 @@ $app->get('/solo-registration', function (Request $request, Response $response) 
 $app->get('/cancel-solo-registration', function (Request $request, Response $response) {
    require ('controleurs/CtrlCancelSoloRegistration.php');
 });
-    
+
+// Page annuler inscription individuel
+$app->get('/registrations-history', function (Request $request, Response $response) {
+   require ('vues/recapInscriptionVue.php');
+});
+
 // Page jeux CS
 $app->get('/cs', function (Request $request, Response $response) {
    require ('vues/csVue.php');
@@ -143,4 +153,5 @@ $app->get('/rl', function (Request $request, Response $response) {
 $app->get('/pokemon', function (Request $request, Response $response) {
    require ('vues/pokemonVue.php');
 });
+
 $app->run();

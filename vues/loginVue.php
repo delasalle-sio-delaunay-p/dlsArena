@@ -52,7 +52,7 @@
 							</div>
 							<div class="panel-footer">
 								Pas de compte ? <a href="register">S'inscrire maintenant</a><br/>
-								Mot de passe oublié ? <a href="index">Cliquez ici</a>
+								Mot de passe oublié ? <a href="password-reset">Cliquez ici</a>
 							</div>
 						</div>
 					</div>

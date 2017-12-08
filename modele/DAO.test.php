@@ -68,6 +68,21 @@ foreach ($soloGames as $oneGame)
 }
 */
 
+/*
+$lesSoloReg = $dao->getSoloRegByLogin("admin");
+
+foreach ($lesSoloReg as $uneSoloReg)
+{
+    echo $uneSoloReg->toString();
+}
+echo $dao->getRandomPassword(8);
+*/
+
+/*
+$ok = $dao->updatePassword("dls.admin@dls.fr");
+echo $ok;
+*/
+
 unset($dao);
 ?>
 

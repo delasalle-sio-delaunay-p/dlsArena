@@ -17,6 +17,8 @@ if (isset($_SESSION['login']) && isset($_SESSION['levelUser']) ) {
    $user = $dao->getUserByLogin($login);        
    $soloGames = $dao->getSoloGames();
    
+   $soloRegs = $dao->getSoloRegByLogin($login);
+   
    $login = $user->getLogin();
    $mail = $user->getMail();
    $firstname = $user->getFirstName();

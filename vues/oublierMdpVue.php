@@ -5,9 +5,7 @@
 
 include_once('include/head.php'); 
 include_once('modele/DAO.Class.php');
-$dao = new DAO();
-$lesClasses = $dao->getClasses();
-unset($dao);
+
 ?>
 </head>
 
@@ -24,10 +22,11 @@ unset($dao);
 			<div class="hero-bg"></div>
 			<div class="container">
 				<div class="page-header">
-					<div class="page-title">Mot de passe oublié</div>
+					<div class="page-title">Récapitulatif</div>
 					<ol class="breadcrumb">
 						<li><a href="index" class="no-padding-left">Accueil</a></li>
-						<li class="active">Mot de passe oublié</li>
+						<li><a href="my-menu" class="no-padding-left">Menu - espace membre</a></li>
+						<li class="active">Récapitulatif des inscriptions</li>
 					</ol>	
 				</div>
 			</div>
@@ -38,26 +37,13 @@ unset($dao);
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-3">
-						<h3>Mot de passe oublié : </h3>
-						<p>Vous rencontrez un problème ? <a href="contact" class="no-padding-left">Cliquez ici pour vous contacter un administrateur.</a></p>
+						<h3>Récapitulatif des inscriptions : </h3>
+						<p>Vous rencontrez un problème ? <a href="contact-admin" class="no-padding-left">Cliquez ici pour vous contacter un administrateur.</a></p>
+						
+						<p><b>Inscriptions pour les tournois 1 joueur :  </b></p>
+						
+						<p><b>Inscriptions pour les tournois multi-joueurs : </b></p>
 
-						<p>Un nouveau mot de passe vous sera envoyé par mail.</p>
-						<form method="post" action="">
-						  <div class="form-group row">
-						    <label for="colFormLabel" class="col-sm-2 col-form-label">Adresse mail : </label>
-						    <div class="col-sm-10">
-						      <input type="email" class="form-control" name="password" placeholder="Votre adresse mail" required>
-						    </div>
-						  </div>
-
-
-
-						  <div class="form-group row">
-						    <div class="col-sm-10">
-						      <button type="submit" class="btn btn-primary">Envoyer</button>
-						    </div>
-						  </div>
-						</form>
 					</div>
 				</div>
 			</div>
