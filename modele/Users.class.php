@@ -10,7 +10,7 @@ class User
 	private $firstname;			// prénom de l'utilisateur
 	private $lastname;			// nom de l'utilisateur
 	private $mail;				// adresse mail de l'utilisateur
-	private $tel;				// numéro de téléphone de l'utilisateur
+	//private $tel;				// numéro de téléphone de l'utilisateur
 	private $login;				// nom de l'utilisateur
 	private $password;			// mot de passe de l'utilisateur
 	private $idClasse;          // identifiant de la classe de l'utilisateur
@@ -22,13 +22,13 @@ class User
 	/*
 	 * Constructeurs avec 9 paramètres
 	 */
-	public function User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword, $unIdClasse) {
+	public function User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unLogin, $unPassword, $unIdClasse) {
 		$this->id = $unId;
 		$this->level = $unLevel;
 		$this->firstname = $unFirstName;
 		$this->lastname = $unLastName;
 		$this->mail = $unMail;
-		$this->tel = $unTel;
+		//$this->tel = $unTel;
 		$this->login = $unLogin;
 		$this->password = $unPassword;
 		$this->idClasse = $unIdClasse;
@@ -53,8 +53,8 @@ class User
 	public function getMail()	{return $this->mail;}
 	public function setMail($unMail) {$this->mail = $unMail;}
 
-	public function getTel()	{return $this->tel;}
-	public function setTel($unTel) {$this->tel = $unTel;}
+	//public function getTel()	{return $this->tel;}
+	//public function setTel($unTel) {$this->tel = $unTel;}
 
 	public function getLogin()	{return $this->login;}
 	public function setLogin($unLogin) {$this->login = $unLogin;}

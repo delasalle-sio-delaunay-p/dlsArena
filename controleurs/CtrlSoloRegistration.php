@@ -21,7 +21,6 @@ if (isset($_SESSION['login']) && isset($_SESSION['levelUser']) ) {
    $mail = $user->getMail();
    $firstname = $user->getFirstName();
    $lastname = $user->getLastName();
-   $tel = $user->getTel();
    $classe = $user->getIdClasse();
    
    unset($dao);

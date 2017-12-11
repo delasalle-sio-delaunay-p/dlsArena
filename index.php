@@ -48,7 +48,7 @@ $app->post('/login', function (Request $request, Response $response) {
 
 // Page d'oubli de mot de passe
 $app->get('/password-reset', function (Request $request, Response $response) {
-    require ('vues/changerPasswordVue.php');
+    require ('vues/resetPasswordVue.php');
 });
 
 // Page d'inscription
@@ -104,7 +104,7 @@ $app->get('/contact-admin', function (Request $request, Response $response) {
     require ('vues/contactAdminVue.php');
 });
 
-// Page contact admin - zone membre
+// Page changer password - zone membre
 $app->get('/change-password', function (Request $request, Response $response) {
     require ('vues/changerPasswordVue.php');
 });

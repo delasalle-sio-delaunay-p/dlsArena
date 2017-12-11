@@ -68,13 +68,6 @@ unset($dao);
 						    </div>
 						  </div>
 
-						  <div class="form-group row">
-						    <label for="colFormLabel" class="col-sm-2 col-form-label">Téléphone</label>
-						    <div class="col-sm-10">
-						      <input type="text" class="form-control" name="tel" id="tel" value=<?php if (isset($tel)) { echo $tel;} ?>>
-						    </div>
-						  </div>
-
 					    <div class="form-group row">
 					      <label for="colFormLabel" class="col-sm-2 col-form-label">Classe</label>
 					      <div class="col-sm-10">

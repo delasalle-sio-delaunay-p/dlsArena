@@ -443,7 +443,7 @@ class DAO
 	    $unFirstName = $unUser->getFirstName();
 	    $unLastName = $unUser->getLastName();
 	    $unMail = $unUser->getMail();
-	    $unTel = $unUser->getTel();
+	    //$unTel = $unUser->getTel();
 	    $unLogin = $unUser->getLogin();
 	    $unPassword = $unUser->getPassword();
 	    $unIdClasse = $unUser->getIdClasse();
@@ -457,14 +457,14 @@ class DAO
 	    }
 	    
 	    // préparation de la requete
-	    $txt_req = "INSERT INTO users ( level, firstname, lastname, mail, tel, login, password, ipAdress, id_classes)";
-	    $txt_req .= " VALUES (:level, :firstname, :lastname, :mail, :tel, :login, :password, :ip, :idclasse)";
+	    $txt_req = "INSERT INTO users ( level, firstname, lastname, mail, login, password, ipAdress, id_classes)";
+	    $txt_req .= " VALUES (:level, :firstname, :lastname, :mail, :login, :password, :ip, :idclasse)";
 	    $req = $this->cnx->prepare($txt_req);
 	    $req->bindValue("level", $unLevel, PDO::PARAM_STR);
 	    $req->bindValue("firstname", $unFirstName, PDO::PARAM_STR);
 	    $req->bindValue("lastname", $unLastName, PDO::PARAM_STR);
 	    $req->bindValue("mail", $unMail, PDO::PARAM_STR);
-	    $req->bindValue("tel", $unTel, PDO::PARAM_STR);
+	    //$req->bindValue("tel", $unTel, PDO::PARAM_STR);
 	    $req->bindValue("login", $unLogin, PDO::PARAM_STR);
 	    $req->bindValue("password", sha1($unPassword), PDO::PARAM_STR);
 	    $req->bindValue("ip", $ip, PDO::PARAM_STR);
@@ -550,11 +550,11 @@ class DAO
         $unFirstName = utf8_encode($uneLigne->firstname);
         $unLastName = utf8_encode($uneLigne->lastname);
         $unMail = utf8_encode($uneLigne->mail);
-        $unTel = utf8_encode($uneLigne->tel);
+        //$unTel = utf8_encode($uneLigne->tel);
         $unLogin = utf8_encode($uneLigne->login);
         $unPassword = utf8_encode($uneLigne->password);
         $unIdClasse = utf8_encode($uneLigne->id_classes);
-        $unUser = new User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unTel, $unLogin, $unPassword, $unIdClasse);
+        $unUser = new User($unId, $unLevel, $unFirstName, $unLastName, $unMail, $unLogin, $unPassword, $unIdClasse);
             
         // libère les ressources du jeu de données
         $req->closeCursor();

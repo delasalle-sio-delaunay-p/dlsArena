@@ -24,11 +24,10 @@ unset($dao);
 			<div class="hero-bg"></div>
 			<div class="container">
 				<div class="page-header">
-					<div class="page-title">Changement de mot de passe</div>
+					<div class="page-title">Mot de passe oublié</div>
 					<ol class="breadcrumb">
 						<li><a href="index" class="no-padding-left">Accueil</a></li>
-						<li><a href="my-menu" class="no-padding-left">Menu - espace membre</a></li>
-						<li class="active">Changement de mot de passe</li>
+						<li class="active">Mot de passe oublié</li>
 					</ol>	
 				</div>
 			</div>
@@ -39,27 +38,23 @@ unset($dao);
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-3">
-						<h3>Changement de mot de passe : </h3>
-						<p>Vous rencontrez un problème ? <a href="contact-admin" class="no-padding-left">Cliquez ici pour vous contacter un administrateur.</a></p>
+						<h3>Mot de passe oublié : </h3>
+						<p>Vous rencontrez un problème ? <a href="contact" class="no-padding-left">Cliquez ici pour vous contacter un administrateur.</a></p>
 
+						<p>Un nouveau mot de passe vous sera envoyé par mail.</p>
 						<form method="post" action="">
 						  <div class="form-group row">
-						    <label for="colFormLabel" class="col-sm-2 col-form-label">Mot de passe : </label>
+						    <label for="colFormLabel" class="col-sm-2 col-form-label">Adresse mail : </label>
 						    <div class="col-sm-10">
-						      <input type="password" class="form-control" name="password" placeholder="Votre mot de passe" required>
+						      <input type="email" class="form-control" name="password" placeholder="Votre adresse mail" required>
 						    </div>
 						  </div>
 
-						  <div class="form-group row">
-						    <label for="colFormLabel" class="col-sm-2 col-form-label">Confirmation : </label>
-						    <div class="col-sm-10">
-						      <input type="password" class="form-control" name="confPassword" placeholder="Confirmer votre mot de passe" required>
-						    </div>
-						  </div>
+
 
 						  <div class="form-group row">
 						    <div class="col-sm-10">
-						      <button type="submit" class="btn btn-primary">Mettre à jour</button>
+						      <button type="submit" class="btn btn-primary">Envoyer</button>
 						    </div>
 						  </div>
 						</form>
