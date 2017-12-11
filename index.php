@@ -129,6 +129,11 @@ $app->get('/registrations-history', function (Request $request, Response $respon
    require ('vues/recapInscriptionVue.php');
 });
 
+// Page annuler inscription individuel
+$app->get('/create-team', function (Request $request, Response $response) {
+   require ('vues/creerEquipeVue.php');
+});
+
 // Page jeux CS
 $app->get('/cs', function (Request $request, Response $response) {
    require ('vues/csVue.php');

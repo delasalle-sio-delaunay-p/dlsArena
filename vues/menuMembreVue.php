@@ -51,7 +51,7 @@
 					<h3>Gérer mon équipe</h3>
 					<br/>
 					<button type="button" class="btn btn-danger btn-icon-right">S'inscrire en équipe <i class="fa fa-check-square-o"></i></button>
-					<button type="button" class="btn btn-danger btn-icon-right">Créer une équipe <i class="fa fa-caret-square-o-right"></i></button>
+					<a href="create-team"><button type="button" class="btn btn-danger btn-icon-right">Créer une équipe <i class="fa fa-caret-square-o-right"></i></button></a>
 					<button type="button" class="btn btn-danger btn-icon-right">Rejoindre une équipe <i class="fa fa-users"></i></button>
 					<button type="button" class="btn btn-danger btn-icon-right">Gérer mon équipe <i class="fa fa-cog"></i></button>
 					<!--<button type="button" class="btn btn-danger btn-icon-right">Récapitulatif de l'inscription<i class="fa fa-inbox"></i></button>-->
